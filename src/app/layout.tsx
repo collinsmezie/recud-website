@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <ClientThemeProvider>
-          {children}
+        {children}
         </ClientThemeProvider>
       </body>
     </html>

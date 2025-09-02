@@ -9,11 +9,14 @@ import {
   FlashOn, 
   Security, 
   Language,
+  Cloud,
   Mail,
   Phone,
   LocationOn,
   Menu,
-  Close
+  Close,
+  AutoAwesome,
+  AccountTree
 } from '@mui/icons-material';
 import { 
   AppBar, 
@@ -36,37 +39,73 @@ import {
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   const services = [
     {
-      icon: <Settings sx={{ fontSize: 32, color: 'primary.main' }} />,
-      title: "Process Automation",
-      description: "Streamline workflows and eliminate manual tasks with intelligent automation solutions."
-    },
-    {
-      icon: <BarChart sx={{ fontSize: 32, color: 'primary.main' }} />,
+      icon: <BarChart sx={{ fontSize: 40, color: '#f97316' }} />,
       title: "Analytics & Insights",
-      description: "Gain deep visibility into your processes with real-time analytics and reporting."
+      description: "Gain deep insights into your business processes with advanced analytics. Make data-driven decisions to optimize performance.",
+      features: [
+        "Custom dashboards & reports",
+        "Process bottlenecks identification", 
+        "Performance metrics tracking",
+        "Predictive analytics"
+      ]
     },
     {
-      icon: <FlashOn sx={{ fontSize: 32, color: 'primary.main' }} />,
-      title: "Workflow Management",
-      description: "Design, implement, and optimize complex business workflows with ease."
-    },
-    {
-      icon: <Security sx={{ fontSize: 32, color: 'primary.main' }} />,
+      icon: <Security sx={{ fontSize: 40, color: '#ef4444' }} />,
       title: "Compliance & Security",
-      description: "Ensure regulatory compliance and data security across all processes."
+      description: "Maintain regulatory compliance and data security throughout your processes. Built-in audit trails and security controls.",
+      features: [
+        "Audit trail & logging",
+        "GDPR & HIPAA compliance",
+        "Access control & permissions",
+        "Data encryption & security"
+      ]
     },
     {
-      icon: <Language sx={{ fontSize: 32, color: 'primary.main' }} />,
-      title: "Cloud Solutions",
-      description: "Scalable cloud-based BPM solutions accessible from anywhere, anytime."
+      icon: <Cloud sx={{ fontSize: 40, color: '#8b5cf6' }} />,
+      title: "Cloud Integration",
+      description: "Connect with your existing cloud services and applications. Seamlessly integrate with popular SaaS platforms.",
+      features: [
+        "Pre-built integrations",
+        "API-first architecture",
+        "Real-time data sync",
+        "Scalable cloud infrastructure"
+      ]
     },
     {
-      icon: <People sx={{ fontSize: 32, color: 'primary.main' }} />,
+      icon: <FlashOn sx={{ fontSize: 40, color: '#10b981' }} />,
+      title: "Process Automation",
+      description: "Streamline workflows and eliminate manual tasks with intelligent automation solutions that adapt to your business needs.",
+      features: [
+        "Workflow automation",
+        "Task scheduling & routing",
+        "Exception handling",
+        "Performance monitoring"
+      ]
+    },
+    {
+      icon: <AccountTree sx={{ fontSize: 40, color: '#f59e0b' }} />,
+      title: "Workflow Design",
+      description: "Design, implement, and optimize complex business workflows with our intuitive drag-and-drop workflow builder.",
+      features: [
+        "Visual workflow designer",
+        "Process modeling tools",
+        "Business rule engine",
+        "Workflow templates"
+      ]
+    },
+    {
+      icon: <People sx={{ fontSize: 40, color: '#06b6d4' }} />,
       title: "Team Collaboration",
-      description: "Foster collaboration and communication across teams and departments."
+      description: "Foster collaboration and communication across teams and departments with integrated collaboration tools.",
+      features: [
+        "Team workspaces",
+        "Real-time notifications",
+        "Document sharing",
+        "Communication tools"
+      ]
     }
   ];
 
@@ -101,28 +140,198 @@ export default function Home() {
   return (
     <div>
       {/* Navigation */}
-      <AppBar position="fixed" sx={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(8px)', borderBottom: '1px solid #e2e8f0' }}>
-        <Toolbar>
-          <Typography variant="h4" component="h1" sx={{ color: 'primary.main', fontWeight: 'bold', flexGrow: 1 }}>
-            RECUD
-          </Typography>
+      <AppBar position="fixed" elevation={0} sx={{ 
+        background: 'linear-gradient(135deg, #f0f9ff 0%, #f8fafc 50%, #ffffff 100%)',
+        backdropFilter: 'blur(8px)'
+      }}>
+        <Toolbar sx={{ 
+          py: 0.75, 
+          px: { xs: 2, md: 3 },
+          minHeight: '60px !important'
+        }}>
+          {/* Left Side - Logo and Brand */}
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flexGrow: 1 }}>
+            {/* Logo SVG */}
+            <Box 
+              component="img" 
+              src="/logo.svg" 
+              alt="RECUD Logo"
+              sx={{ 
+                height: 28,
+                width: 28,
+                filter: 'none',
+                backgroundColor: 'transparent',
+                background: 'none',
+                opacity: 0.7,
+                mixBlendMode: 'multiply',
+                transition: 'all 0.3s ease'
+              }}
+            />
+            
+            {/* Brand Text with Gradient */}
+            <Typography 
+              variant="h4" 
+              component="h1" 
+              sx={{ 
+                background: 'linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #14b8a6 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                color: '#1e293b',
+                fontWeight: 800,
+                fontSize: '1.85rem',
+                letterSpacing: '-0.025em',
+                textShadow: '0 2px 4px rgba(59, 130, 246, 0.1)',
+                position: 'relative',
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: -2,
+                  left: 0,
+                  right: 0,
+                  height: 2,
+                  background: 'linear-gradient(90deg, #0ea5e9 0%, #06b6d4 50%, #14b8a6 100%)',
+                  borderRadius: 1,
+                  opacity: 0.3
+                }
+              }}
+            >
+              RECUD
+            </Typography>
+          </Box>
           
-          {/* Desktop Navigation */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 4 }}>
-            <Button color="inherit" href="#services" sx={{ color: '#374151', '&:hover': { color: 'primary.main' } }}>
+          {/* Center - Navigation Links */}
+          <Box sx={{ 
+            display: { xs: 'none', lg: 'flex' }, 
+            alignItems: 'center', 
+            gap: 2.5,
+            position: 'absolute',
+            left: '50%',
+            transform: 'translateX(-50%)'
+          }}>
+            <Button 
+              color="inherit" 
+              href="#services" 
+              sx={{ 
+                color: '#374151', 
+                fontWeight: 500,
+                fontSize: '0.9rem',
+                textTransform: 'none',
+                px: 1.5,
+                py: 0.5,
+                borderRadius: 1,
+                '&:hover': { 
+                  color: '#1e293b',
+                  backgroundColor: 'rgba(59, 130, 246, 0.05)'
+                }
+              }}
+            >
               Services
             </Button>
-            <Button color="inherit" href="#industries" sx={{ color: '#374151', '&:hover': { color: 'primary.main' } }}>
+            <Button 
+              color="inherit" 
+              href="#industries" 
+              sx={{ 
+                color: '#374151', 
+                fontWeight: 500,
+                fontSize: '0.9rem',
+                textTransform: 'none',
+                px: 1.5,
+                py: 0.5,
+                borderRadius: 1,
+                '&:hover': { 
+                  color: '#1e293b',
+                  backgroundColor: 'rgba(59, 130, 246, 0.05)'
+                }
+              }}
+            >
               Industries
             </Button>
-            <Button color="inherit" href="#team" sx={{ color: '#374151', '&:hover': { color: 'primary.main' } }}>
-              Team
+            <Button 
+              color="inherit" 
+              href="#team" 
+              sx={{ 
+                color: '#374151', 
+                fontWeight: 500,
+                fontSize: '0.9rem',
+                textTransform: 'none',
+                px: 1.5,
+                py: 0.5,
+                borderRadius: 1,
+                '&:hover': { 
+                  color: '#1e293b',
+                  backgroundColor: 'rgba(59, 130, 246, 0.05)'
+                }
+              }}
+            >
+              About
             </Button>
-            <Button color="inherit" href="#contact" sx={{ color: '#374151', '&:hover': { color: 'primary.main' } }}>
+            <Button 
+              color="inherit" 
+              href="#contact" 
+              sx={{ 
+                color: '#374151', 
+                fontWeight: 500,
+                fontSize: '0.9rem',
+                textTransform: 'none',
+                px: 1.5,
+                py: 0.5,
+                borderRadius: 1,
+                '&:hover': { 
+                  color: '#1e293b',
+                  backgroundColor: 'rgba(59, 130, 246, 0.05)'
+                }
+              }}
+            >
               Contact
             </Button>
-            <Button variant="contained" color="primary" sx={{ borderRadius: 2 }}>
-              Request Demo
+          </Box>
+
+          {/* Right Side - CTA Buttons */}
+          <Box sx={{ 
+            display: { xs: 'none', md: 'flex' }, 
+            alignItems: 'center', 
+            gap: 1
+          }}>
+            <Button 
+              variant="outlined"
+              sx={{ 
+                borderColor: '#d1d5db',
+                color: '#374151',
+                fontWeight: 500,
+                fontSize: '0.9rem',
+                textTransform: 'none',
+                px: 2.5,
+                py: 1,
+                borderRadius: 1.5,
+                borderWidth: 1.5,
+                '&:hover': { 
+                  borderColor: '#9ca3af',
+                  backgroundColor: '#f9fafb',
+                  borderWidth: 1.5
+                }
+              }}
+            >
+              Get Started
+            </Button>
+            <Button 
+              variant="contained"
+              sx={{ 
+                backgroundColor: '#3b82f6',
+                color: 'white',
+                fontWeight: 500,
+                fontSize: '0.9rem',
+                textTransform: 'none',
+                px: 2.5,
+                py: 1,
+                borderRadius: 1.5,
+                boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                '&:hover': { 
+                  backgroundColor: '#2563eb',
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                }
+              }}
+            >
+              Contact Us
             </Button>
           </Box>
 
@@ -162,7 +371,7 @@ export default function Home() {
               <ListItem>
                 <ListItemText>
                   <Button fullWidth href="#team" sx={{ justifyContent: 'flex-start' }}>
-                    Team
+                    About
                   </Button>
                 </ListItemText>
               </ListItem>
@@ -175,8 +384,15 @@ export default function Home() {
               </ListItem>
               <ListItem>
                 <ListItemText>
+                  <Button fullWidth variant="outlined" sx={{ borderRadius: 2, mb: 1 }}>
+                    Get Started
+                  </Button>
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>
                   <Button fullWidth variant="contained" color="primary" sx={{ borderRadius: 2 }}>
-                    Request Demo
+                    Contact Us
                   </Button>
                 </ListItemText>
               </ListItem>
@@ -187,15 +403,28 @@ export default function Home() {
 
       {/* Hero Section */}
       <Box sx={{ 
-        pt: 15, 
-        pb: 8, 
-        background: 'linear-gradient(135deg, #f0f4ff 0%, #f8faff 50%, #ffffff 100%)',
+        pt: { xs: 6, md: 7 }, 
+        pb: { xs: 8, md: 12 }, 
+        background: 'linear-gradient(135deg, #f0f9ff 0%, #f8fafc 50%, #ffffff 100%)',
         minHeight: '100vh',
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={6} alignItems="center">
+        {/* Background Pattern */}
+        <Box sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.03) 0%, transparent 50%)',
+          pointerEvents: 'none'
+        }} />
+        
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+          <Grid container spacing={{ xs: 4, lg: 8 }} alignItems="center">
             {/* Left Content Area */}
             <Grid item xs={12} lg={7}>
               {/* Tagline Pill */}
@@ -203,16 +432,17 @@ export default function Home() {
                 display: 'inline-flex', 
                 alignItems: 'center', 
                 gap: 1,
-                backgroundColor: '#e0f2fe',
-                color: '#0c4a6e',
+                backgroundColor: '#dbeafe',
+                color: '#1e40af',
                 px: 3,
                 py: 1,
                 borderRadius: '50px',
                 mb: 3,
                 fontSize: '0.875rem',
-                fontWeight: 500
+                fontWeight: 500,
+                border: '1px solid #bfdbfe'
               }}>
-                <FlashOn sx={{ fontSize: 16 }} />
+                <FlashOn sx={{ fontSize: 16, color: '#3b82f6' }} />
                 Streamline Your Business Processes
               </Box>
 
@@ -220,15 +450,22 @@ export default function Home() {
               <Typography variant="h1" sx={{ 
                 fontWeight: 800, 
                 mb: 3,
-                fontSize: { xs: '2.5rem', md: '3.5rem', lg: '4rem' },
+                fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '4rem' },
                 lineHeight: 1.1,
-                color: '#1e293b'
+                color: '#1e293b',
+                letterSpacing: '-0.02em'
               }}>
                 Transform Your{' '}
-                <Box component="span" sx={{ color: '#2563eb' }}>
+                <Box component="span" sx={{ 
+                  color: '#3b82f6',
+                  position: 'relative'
+                }}>
                   Business
                 </Box>{' '}
-                <Box component="span" sx={{ color: '#7c3aed' }}>
+                <Box component="span" sx={{ 
+                  color: '#7c3aed',
+                  position: 'relative'
+                }}>
                   Operations
                 </Box>{' '}
                 with Intelligent BPM Solutions
@@ -239,8 +476,9 @@ export default function Home() {
                 color: '#64748b', 
                 mb: 4, 
                 lineHeight: 1.6,
-                fontSize: '1.125rem',
-                maxWidth: '600px'
+                fontSize: { xs: '1rem', md: '1.125rem' },
+                maxWidth: '600px',
+                fontWeight: 400
               }}>
                 RECUD specializes in designing and developing cutting-edge business process management software 
                 tailored for various industries. Automate, optimize, and scale your operations with our proven solutions.
@@ -250,16 +488,20 @@ export default function Home() {
               <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, mb: 6 }}>
                 <Button 
                   variant="contained" 
-                  color="primary" 
                   size="large"
-                  endIcon={<ArrowForward />}
+                  endIcon={<ArrowForward sx={{ fontSize: 20 }} />}
                   sx={{ 
                     px: 4, 
                     py: 1.5, 
                     fontSize: '1.125rem', 
                     borderRadius: 2,
-                    backgroundColor: '#2563eb',
-                    '&:hover': { backgroundColor: '#1d4ed8' }
+                    backgroundColor: '#3b82f6',
+                    fontWeight: 600,
+                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                    '&:hover': { 
+                      backgroundColor: '#2563eb',
+                      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                    }
                   }}
                 >
                   Get Started Today →
@@ -273,11 +515,14 @@ export default function Home() {
                     py: 1.5, 
                     fontSize: '1.125rem', 
                     borderRadius: 2,
-                    borderColor: '#cbd5e1',
-                    color: '#475569',
+                    borderColor: '#d1d5db',
+                    color: '#374151',
+                    fontWeight: 500,
+                    borderWidth: 1.5,
                     '&:hover': { 
-                      borderColor: '#94a3b8',
-                      backgroundColor: '#f8fafc'
+                      borderColor: '#9ca3af',
+                      backgroundColor: '#f9fafb',
+                      borderWidth: 1.5
                     }
                   }}
                 >
@@ -286,40 +531,67 @@ export default function Home() {
               </Box>
 
               {/* Statistics Section */}
-              <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <Typography variant="h3" sx={{ 
+              <Box sx={{ display: 'flex', gap: { xs: 3, md: 6 }, flexWrap: 'wrap' }}>
+                <Box sx={{ textAlign: 'left' }}>
+                  <Typography variant="h2" sx={{ 
                     fontWeight: 800, 
-                    color: '#1e293b',
-                    fontSize: '2.5rem'
+                    background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    color: 'transparent',
+                    fontSize: { xs: '2rem', md: '2.5rem' },
+                    lineHeight: 1,
+                    mb: 0.5
                   }}>
                     500+
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', fontWeight: 500 }}>
+                  <Typography variant="body2" sx={{ 
+                    color: '#64748b', 
+                    fontWeight: 500,
+                    fontSize: '0.875rem'
+                  }}>
                     Clients Served
                   </Typography>
                 </Box>
-                <Box sx={{ textAlign: 'center' }}>
-                  <Typography variant="h3" sx={{ 
+                <Box sx={{ textAlign: 'left' }}>
+                  <Typography variant="h2" sx={{ 
                     fontWeight: 800, 
-                    color: '#1e293b',
-                    fontSize: '2.5rem'
+                    background: 'linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%)',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    color: 'transparent',
+                    fontSize: { xs: '2rem', md: '2.5rem' },
+                    lineHeight: 1,
+                    mb: 0.5
                   }}>
                     50+
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', fontWeight: 500 }}>
+                  <Typography variant="body2" sx={{ 
+                    color: '#64748b', 
+                    fontWeight: 500,
+                    fontSize: '0.875rem'
+                  }}>
                     Industries
                   </Typography>
                 </Box>
-                <Box sx={{ textAlign: 'center' }}>
-                  <Typography variant="h3" sx={{ 
+                <Box sx={{ textAlign: 'left' }}>
+                  <Typography variant="h2" sx={{ 
                     fontWeight: 800, 
-                    color: '#1e293b',
-                    fontSize: '2.5rem'
+                    background: 'linear-gradient(135deg, #10b981 0%, #14b8a6 100%)',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    color: 'transparent',
+                    fontSize: { xs: '2rem', md: '2.5rem' },
+                    lineHeight: 1,
+                    mb: 0.5
                   }}>
                     99%
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', fontWeight: 500 }}>
+                  <Typography variant="body2" sx={{ 
+                    color: '#64748b', 
+                    fontWeight: 500,
+                    fontSize: '0.875rem'
+                  }}>
                     Uptime
                   </Typography>
                 </Box>
@@ -338,51 +610,69 @@ export default function Home() {
                 <Box sx={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: 2,
-                  backgroundColor: 'white',
+                  gap: 3,
                   p: 3,
                   borderRadius: 3,
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
                   width: '100%',
-                  maxWidth: '400px'
+                  maxWidth: '420px',
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    transform: 'translateY(-1px)'
+                  }
                 }}>
                   <Box sx={{ 
-                    width: 48, 
-                    height: 48, 
+                    width: 56, 
+                    height: 56, 
                     borderRadius: '50%', 
-                    backgroundColor: '#2563eb',
+                    backgroundColor: '#3b82f6',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: 'white',
                     fontWeight: 700,
-                    fontSize: '1.25rem'
+                    fontSize: '1.5rem',
+                    flexShrink: 0,
+                    boxShadow: '0 4px 6px -1px rgba(59, 130, 246, 0.3)'
                   }}>
                     1
                   </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 600, color: '#1e293b' }}>
-                    Data Input
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', ml: 'auto' }}>
-                    Seamless data collection
-                  </Typography>
+                  <Box sx={{ flex: 1 }}>
+                    <Typography variant="h6" sx={{ 
+                      fontWeight: 600, 
+                      color: '#1e293b',
+                      fontSize: '1.125rem',
+                      mb: 0.5
+                    }}>
+                      Data Input
+                    </Typography>
+                    <Typography variant="body2" sx={{ 
+                      color: '#64748b',
+                      fontSize: '0.875rem'
+                    }}>
+                      Seamless data collection
+                    </Typography>
+                  </Box>
                 </Box>
 
                 {/* Process Step 2 */}
                 <Box sx={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: 2,
-                  backgroundColor: 'white',
+                  gap: 3,
                   p: 3,
                   borderRadius: 3,
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
                   width: '100%',
-                  maxWidth: '400px'
+                  maxWidth: '420px',
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    transform: 'translateY(-1px)'
+                  }
                 }}>
                   <Box sx={{ 
-                    width: 48, 
-                    height: 48, 
+                    width: 56, 
+                    height: 56, 
                     borderRadius: '50%', 
                     backgroundColor: '#7c3aed',
                     display: 'flex',
@@ -390,33 +680,48 @@ export default function Home() {
                     justifyContent: 'center',
                     color: 'white',
                     fontWeight: 700,
-                    fontSize: '1.25rem'
+                    fontSize: '1.5rem',
+                    flexShrink: 0,
+                    boxShadow: '0 4px 6px -1px rgba(124, 58, 237, 0.3)'
                   }}>
                     2
                   </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 600, color: '#1e293b' }}>
-                    Process Automation
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', ml: 'auto' }}>
-                    Intelligent workflow automation
-                  </Typography>
+                  <Box sx={{ flex: 1 }}>
+                    <Typography variant="h6" sx={{ 
+                      fontWeight: 600, 
+                      color: '#1e293b',
+                      fontSize: '1.125rem',
+                      mb: 0.5
+                    }}>
+                      Process Automation
+                    </Typography>
+                    <Typography variant="body2" sx={{ 
+                      color: '#64748b',
+                      fontSize: '0.875rem'
+                    }}>
+                      Intelligent workflow automation
+                    </Typography>
+                  </Box>
                 </Box>
 
                 {/* Process Step 3 */}
                 <Box sx={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: 2,
-                  backgroundColor: 'white',
+                  gap: 3,
                   p: 3,
                   borderRadius: 3,
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
                   width: '100%',
-                  maxWidth: '400px'
+                  maxWidth: '420px',
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    transform: 'translateY(-1px)'
+                  }
                 }}>
                   <Box sx={{ 
-                    width: 48, 
-                    height: 48, 
+                    width: 56, 
+                    height: 56, 
                     borderRadius: '50%', 
                     backgroundColor: '#10b981',
                     display: 'flex',
@@ -424,33 +729,48 @@ export default function Home() {
                     justifyContent: 'center',
                     color: 'white',
                     fontWeight: 700,
-                    fontSize: '1.25rem'
+                    fontSize: '1.5rem',
+                    flexShrink: 0,
+                    boxShadow: '0 4px 6px -1px rgba(16, 185, 129, 0.3)'
                   }}>
                     3
                   </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 600, color: '#1e293b' }}>
-                    Analytics & Insights
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', ml: 'auto' }}>
-                    Real-time performance metrics
-                  </Typography>
+                  <Box sx={{ flex: 1 }}>
+                    <Typography variant="h6" sx={{ 
+                      fontWeight: 600, 
+                      color: '#1e293b',
+                      fontSize: '1.125rem',
+                      mb: 0.5
+                    }}>
+                      Analytics & Insights
+                    </Typography>
+                    <Typography variant="body2" sx={{ 
+                      color: '#64748b',
+                      fontSize: '0.875rem'
+                    }}>
+                      Real-time performance metrics
+                    </Typography>
+                  </Box>
                 </Box>
 
                 {/* Process Step 4 */}
                 <Box sx={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: 2,
-                  backgroundColor: 'white',
+                  gap: 3,
                   p: 3,
                   borderRadius: 3,
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
                   width: '100%',
-                  maxWidth: '400px'
+                  maxWidth: '420px',
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    transform: 'translateY(-1px)'
+                  }
                 }}>
                   <Box sx={{ 
-                    width: 48, 
-                    height: 48, 
+                    width: 56, 
+                    height: 56, 
                     borderRadius: '50%', 
                     backgroundColor: '#f59e0b',
                     display: 'flex',
@@ -458,16 +778,28 @@ export default function Home() {
                     justifyContent: 'center',
                     color: 'white',
                     fontWeight: 700,
-                    fontSize: '1.25rem'
+                    fontSize: '1.5rem',
+                    flexShrink: 0,
+                    boxShadow: '0 4px 6px -1px rgba(245, 158, 11, 0.3)'
                   }}>
                     4
                   </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 600, color: '#1e293b' }}>
-                    Optimization
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', ml: 'auto' }}>
-                    Continuous improvement
-                  </Typography>
+                  <Box sx={{ flex: 1 }}>
+                    <Typography variant="h6" sx={{ 
+                      fontWeight: 600, 
+                      color: '#1e293b',
+                      fontSize: '1.125rem',
+                      mb: 0.5
+                    }}>
+                      Optimization
+                    </Typography>
+                    <Typography variant="body2" sx={{ 
+                      color: '#64748b',
+                      fontSize: '0.875rem'
+                    }}>
+                      Continuous improvement
+                    </Typography>
+                  </Box>
                 </Box>
               </Box>
             </Grid>
@@ -476,13 +808,28 @@ export default function Home() {
       </Box>
 
       {/* Services Section */}
-      <Box id="services" sx={{ py: 10, backgroundColor: 'white' }}>
+      <Box id="services" sx={{ py: 20, backgroundColor: 'white' }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
+            <Typography variant="h1" component="h2" sx={{ 
+              fontWeight: 800, 
+              mb: 2,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '2.3rem' },
+              lineHeight: 1.1,
+              color: '#1e293b',
+              letterSpacing: '-0.02em'
+            }}>
               Comprehensive BPM Solutions
             </Typography>
-            <Typography variant="h6" sx={{ color: '#4b5563', maxWidth: '600px', mx: 'auto' }}>
+            <Typography variant="h6" sx={{ 
+              color: '#64748b', 
+              mb: 4, 
+              lineHeight: 1.6,
+              fontSize: { xs: '1rem', md: '1.125rem' },
+              maxWidth: '600px',
+              mx: 'auto',
+              fontWeight: 400
+            }}>
               From process automation to advanced analytics, we provide end-to-end solutions 
               that transform how businesses operate.
             </Typography>
@@ -494,36 +841,124 @@ export default function Home() {
                 <Card sx={{ 
                   p: 4, 
                   height: '100%',
-                  backgroundColor: '#f8fafc',
+                  backgroundColor: 'white',
+                  borderRadius: 3,
+                  boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
                   '&:hover': { 
-                    boxShadow: 6,
-                    transform: 'translateY(-4px)',
+                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    transform: 'translateY(-2px)',
                     transition: 'all 0.3s ease'
                   }
                 }}>
-                  <CardContent sx={{ textAlign: 'center' }}>
-                    <Box sx={{ mb: 2 }}>
+                  <CardContent sx={{ p: 0 }}>
+                    {/* Icon */}
+                    <Box sx={{ 
+                      width: 64, 
+                      height: 64, 
+                      borderRadius: 2, 
+                      backgroundColor: service.icon.props.sx.color + '20',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mb: 3
+                    }}>
                       {service.icon}
                     </Box>
-                    <Typography variant="h5" component="h3" sx={{ fontWeight: 'semibold', mb: 2 }}>
+                    
+                    {/* Title */}
+                    <Typography variant="h5" component="h3" sx={{ 
+                      fontWeight: 700, 
+                      mb: 2,
+                      color: '#1e293b',
+                      fontSize: '1.25rem'
+                    }}>
                       {service.title}
                     </Typography>
-                    <Typography variant="body1" color="text.secondary">
+                    
+                    {/* Description */}
+                    <Typography variant="body1" sx={{ 
+                      color: '#64748b',
+                      mb: 3,
+                      lineHeight: 1.6
+                    }}>
                       {service.description}
+                    </Typography>
+                    
+                    {/* Features List */}
+                    <Box sx={{ mb: 3 }}>
+                      {service.features.map((feature, featureIndex) => (
+                        <Box key={featureIndex} sx={{ 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          mb: 1,
+                          color: '#374151',
+                          fontSize: '0.875rem'
+                        }}>
+                          <Box sx={{ 
+                            width: 4, 
+                            height: 4, 
+                            borderRadius: '50%', 
+                            backgroundColor: '#374151',
+                            mr: 1.5,
+                            flexShrink: 0
+                          }} />
+                          {feature}
+                        </Box>
+                      ))}
+                    </Box>
+                    
+                    {/* Learn More Link */}
+                    <Typography variant="body2" sx={{ 
+                      color: '#1e293b',
+                      fontWeight: 500,
+                      display: 'flex',
+                      alignItems: 'center',
+                      cursor: 'pointer',
+                      '&:hover': {
+                        color: '#374151'
+                      }
+                    }}>
+                      Learn More →
                     </Typography>
                   </CardContent>
                 </Card>
               </Grid>
             ))}
           </Grid>
+          
+          {/* Call to Action Button */}
+          <Box sx={{ textAlign: 'center', mt: 8 }}>
+            <Button 
+              variant="contained" 
+              size="large"
+              sx={{
+                backgroundColor: '#3b82f6',
+                color: 'white',
+                px: 6,
+                py: 2,
+                fontSize: '1.125rem',
+                fontWeight: 600,
+                borderRadius: 2,
+                boxShadow: '0 4px 6px -1px rgba(59, 130, 246, 0.3)',
+                '&:hover': {
+                  backgroundColor: '#2563eb',
+                  boxShadow: '0 10px 15px -3px rgba(59, 130, 246, 0.4)',
+                  transform: 'translateY(-1px)'
+                },
+                transition: 'all 0.2s ease'
+              }}
+            >
+              Explore All Services →
+            </Button>
+          </Box>
         </Container>
       </Box>
 
       {/* Industries Section */}
-      <Box id="industries" sx={{ py: 10, backgroundColor: '#f8fafc' }}>
+      <Box id="industries" sx={{ py: 20, backgroundColor: '#f8fafc' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
+          <Box sx={{ textAlign: 'center', mb: 16 }}>
+            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 4 }}>
               Serving All Industries
             </Typography>
             <Typography variant="h6" sx={{ color: '#4b5563', maxWidth: '600px', mx: 'auto' }}>
@@ -552,10 +987,10 @@ export default function Home() {
       </Box>
 
       {/* Team Section */}
-      <Box id="team" sx={{ py: 10, backgroundColor: 'white' }}>
+      <Box id="team" sx={{ py: 20, backgroundColor: 'white' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
+          <Box sx={{ textAlign: 'center', mb: 16 }}>
+            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 4 }}>
               Meet Our Expert Team
             </Typography>
             <Typography variant="h6" sx={{ color: '#4b5563', maxWidth: '600px', mx: 'auto' }}>
@@ -574,7 +1009,7 @@ export default function Home() {
                     backgroundColor: 'primary.50', 
                     borderRadius: '50%', 
                     mx: 'auto', 
-                    mb: 2,
+                    mb: 4,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center'
@@ -598,7 +1033,7 @@ export default function Home() {
       </Box>
 
       {/* CTA Section */}
-      <Box sx={{ py: 10, backgroundColor: 'primary.main' }}>
+      <Box sx={{ py: 20, backgroundColor: 'primary.main' }}>
         <Container maxWidth="md">
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 3, color: 'white' }}>
@@ -627,10 +1062,10 @@ export default function Home() {
       </Box>
 
       {/* Contact Section */}
-      <Box id="contact" sx={{ py: 10, backgroundColor: '#f8fafc' }}>
+      <Box id="contact" sx={{ py: 20, backgroundColor: '#f8fafc' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 2 }}>
+          <Box sx={{ textAlign: 'center', mb: 16 }}>
+            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 4 }}>
               Get in Touch
             </Typography>
             <Typography variant="h6" sx={{ color: '#4b5563', maxWidth: '600px', mx: 'auto' }}>
@@ -641,7 +1076,7 @@ export default function Home() {
           
           <Grid container spacing={6}>
             <Grid item xs={12} lg={6}>
-              <Typography variant="h4" sx={{ fontWeight: 'semibold', mb: 3 }}>
+              <Typography variant="h4" sx={{ fontWeight: 'semibold', mb: 6 }}>
                 Contact Information
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -661,7 +1096,7 @@ export default function Home() {
             </Grid>
             
             <Grid item xs={12} lg={6}>
-              <Typography variant="h4" sx={{ fontWeight: 'semibold', mb: 3 }}>
+              <Typography variant="h4" sx={{ fontWeight: 'semibold', mb: 6 }}>
                 Send us a Message
               </Typography>
               <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -714,7 +1149,7 @@ export default function Home() {
       </Box>
 
       {/* Footer */}
-      <Box sx={{ backgroundColor: '#111827', color: 'white', py: 6 }}>
+      <Box sx={{ backgroundColor: '#111827', color: 'white', py: 12 }}>
         <Container maxWidth="lg">
           <Grid container spacing={4}>
             <Grid item xs={12} md={3}>
@@ -759,7 +1194,7 @@ export default function Home() {
               </Box>
             </Grid>
           </Grid>
-          <Box sx={{ borderTop: '1px solid #374151', mt: 4, pt: 4, textAlign: 'center' }}>
+          <Box sx={{ borderTop: '1px solid #374151', mt: 8, pt: 8, textAlign: 'center' }}>
             <Typography variant="body2" color="text.secondary">
               &copy; 2024 RECUD. All rights reserved.
             </Typography>

@@ -225,9 +225,10 @@ export default function Home() {
     <div>
       {/* Navigation */}
       <AppBar position="fixed" elevation={0} sx={{ 
-        background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f0f9ff 100%)',
-        backdropFilter: 'blur(8px)',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.05)'
+        background: 'transparent',
+        backdropFilter: 'blur(10px)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        transition: 'all 0.3s ease'
       }}>
         <Toolbar sx={{ 
           py: 1, 
@@ -279,7 +280,7 @@ export default function Home() {
                 fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   color: '#1e293b',
-                  backgroundColor: 'rgba(59, 130, 246, 0.05)'
+                  backgroundColor: 'rgba(59, 130, 246, 0.1)'
                 }
               }}
             >
@@ -299,7 +300,7 @@ export default function Home() {
                 fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   color: '#1e293b',
-                  backgroundColor: 'rgba(59, 130, 246, 0.05)'
+                  backgroundColor: 'rgba(59, 130, 246, 0.1)'
                 }
               }}
             >
@@ -319,7 +320,7 @@ export default function Home() {
                 fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   color: '#1e293b',
-                  backgroundColor: 'rgba(59, 130, 246, 0.05)'
+                  backgroundColor: 'rgba(59, 130, 246, 0.1)'
                 }
               }}
             >
@@ -339,7 +340,7 @@ export default function Home() {
                 fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   color: '#1e293b',
-                  backgroundColor: 'rgba(59, 130, 246, 0.05)'
+                  backgroundColor: 'rgba(59, 130, 246, 0.1)'
                 }
               }}
             >
@@ -356,7 +357,7 @@ export default function Home() {
             <Button 
               variant="outlined"
               sx={{ 
-                borderColor: '#d1d5db',
+                borderColor: 'rgba(55, 65, 81, 0.3)',
                 color: '#374151',
                 fontWeight: 500,
                 fontSize: '0.9rem',
@@ -366,9 +367,11 @@ export default function Home() {
                 borderRadius: 2,
                 borderWidth: 1.5,
                 fontFamily: 'Inter, system-ui, sans-serif',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
                 '&:hover': { 
-                  borderColor: '#9ca3af',
-                  backgroundColor: '#f9fafb',
+                  borderColor: 'rgba(55, 65, 81, 0.5)',
+                  backgroundColor: 'rgba(255, 255, 255, 0.9)',
                   borderWidth: 1.5
                 }
               }}
@@ -386,11 +389,11 @@ export default function Home() {
                 px: 3,
                 py: 1.2,
                 borderRadius: 2,
-                boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
                 fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   backgroundColor: '#2563eb',
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                  boxShadow: '0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 4px 6px -1px rgba(0, 0, 0, 0.1)'
                 }
               }}
             >

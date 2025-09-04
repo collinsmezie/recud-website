@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import { 
-  ArrowForward, 
-  People, 
-  Settings, 
-  BarChart, 
-  FlashOn, 
-  Security, 
+import {
+  ArrowForward,
+  People,
+  Settings,
+  BarChart,
+  FlashOn,
+  Security,
   Language,
   Cloud,
   Mail,
@@ -33,15 +33,15 @@ import {
   HeadsetMic,
   Send
 } from '@mui/icons-material';
-import { 
-  AppBar, 
-  Toolbar, 
-  Typography, 
-  Button, 
-  Container, 
-  Grid, 
-  Card, 
-  CardContent, 
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Container,
+  Grid,
+  Card,
+  CardContent,
   Box,
   IconButton,
   Drawer,
@@ -60,7 +60,7 @@ import {
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   // Scroll detection
   useEffect(() => {
     const handleScroll = () => {
@@ -236,25 +236,25 @@ export default function Home() {
   return (
     <div>
       {/* Navigation */}
-      <AppBar position="fixed" elevation={0} sx={{ 
+      <AppBar position="fixed" elevation={0} sx={{
         background: isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
         backdropFilter: isScrolled ? 'blur(20px)' : 'blur(10px)',
         borderBottom: isScrolled ? '1px solid rgba(0, 0, 0, 0.1)' : '1px solid rgba(255, 255, 255, 0.1)',
         boxShadow: isScrolled ? '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)' : 'none',
         transition: 'all 0.3s ease'
       }}>
-        <Toolbar sx={{ 
-          py: 1, 
+        <Toolbar sx={{
+          py: 1,
           px: { xs: 2, md: 4 },
           minHeight: '70px !important',
           justifyContent: 'space-between'
         }}>
           {/* Left Side - Logo */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Typography 
-              variant="h4" 
-              component="h1" 
-              sx={{ 
+            <Typography
+              variant="h4"
+              component="h1"
+              sx={{
                 background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
@@ -269,21 +269,21 @@ export default function Home() {
               RECUD
             </Typography>
           </Box>
-          
+
           {/* Center - Navigation Links */}
-          <Box sx={{ 
-            display: { xs: 'none', lg: 'flex' }, 
-            alignItems: 'center', 
+          <Box sx={{
+            display: { xs: 'none', lg: 'flex' },
+            alignItems: 'center',
             gap: 3,
             position: 'absolute',
             left: '50%',
             transform: 'translateX(-50%)'
           }}>
-            <Button 
-              color="inherit" 
-              href="#services" 
-              sx={{ 
-                color: isScrolled ? '#374151' : '#374151', 
+            <Button
+              color="inherit"
+              href="#services"
+              sx={{
+                color: isScrolled ? '#374151' : '#374151',
                 fontWeight: 500,
                 fontSize: '0.95rem',
                 textTransform: 'none',
@@ -291,7 +291,7 @@ export default function Home() {
                 py: 0.5,
                 borderRadius: 1,
                 fontFamily: 'Inter, system-ui, sans-serif',
-                '&:hover': { 
+                '&:hover': {
                   color: '#1e293b',
                   backgroundColor: 'rgba(59, 130, 246, 0.1)'
                 }
@@ -299,11 +299,11 @@ export default function Home() {
             >
               Services
             </Button>
-            <Button 
-              color="inherit" 
-              href="#industries" 
-              sx={{ 
-                color: isScrolled ? '#374151' : '#374151', 
+            <Button
+              color="inherit"
+              href="#industries"
+              sx={{
+                color: isScrolled ? '#374151' : '#374151',
                 fontWeight: 500,
                 fontSize: '0.95rem',
                 textTransform: 'none',
@@ -311,7 +311,7 @@ export default function Home() {
                 py: 0.5,
                 borderRadius: 1,
                 fontFamily: 'Inter, system-ui, sans-serif',
-                '&:hover': { 
+                '&:hover': {
                   color: '#1e293b',
                   backgroundColor: 'rgba(59, 130, 246, 0.1)'
                 }
@@ -319,11 +319,11 @@ export default function Home() {
             >
               Industries
             </Button>
-            <Button 
-              color="inherit" 
-              href="#team" 
-              sx={{ 
-                color: isScrolled ? '#374151' : '#374151', 
+            <Button
+              color="inherit"
+              href="#team"
+              sx={{
+                color: isScrolled ? '#374151' : '#374151',
                 fontWeight: 500,
                 fontSize: '0.95rem',
                 textTransform: 'none',
@@ -331,7 +331,7 @@ export default function Home() {
                 py: 0.5,
                 borderRadius: 1,
                 fontFamily: 'Inter, system-ui, sans-serif',
-                '&:hover': { 
+                '&:hover': {
                   color: '#1e293b',
                   backgroundColor: 'rgba(59, 130, 246, 0.1)'
                 }
@@ -339,11 +339,11 @@ export default function Home() {
             >
               About
             </Button>
-            <Button 
-              color="inherit" 
-              href="#contact" 
-              sx={{ 
-                color: isScrolled ? '#374151' : '#374151', 
+            <Button
+              color="inherit"
+              href="#contact"
+              sx={{
+                color: isScrolled ? '#374151' : '#374151',
                 fontWeight: 500,
                 fontSize: '0.95rem',
                 textTransform: 'none',
@@ -351,7 +351,7 @@ export default function Home() {
                 py: 0.5,
                 borderRadius: 1,
                 fontFamily: 'Inter, system-ui, sans-serif',
-                '&:hover': { 
+                '&:hover': {
                   color: '#1e293b',
                   backgroundColor: 'rgba(59, 130, 246, 0.1)'
                 }
@@ -362,14 +362,14 @@ export default function Home() {
           </Box>
 
           {/* Right Side - CTA Buttons */}
-          <Box sx={{ 
-            display: { xs: 'none', md: 'flex' }, 
-            alignItems: 'center', 
+          <Box sx={{
+            display: { xs: 'none', md: 'flex' },
+            alignItems: 'center',
             gap: 1.5
           }}>
-            <Button 
+            <Button
               variant="outlined"
-              sx={{ 
+              sx={{
                 borderColor: isScrolled ? '#d1d5db' : 'rgba(55, 65, 81, 0.3)',
                 color: '#374151',
                 fontWeight: 500,
@@ -382,7 +382,7 @@ export default function Home() {
                 fontFamily: 'Inter, system-ui, sans-serif',
                 backgroundColor: isScrolled ? 'transparent' : 'rgba(255, 255, 255, 0.8)',
                 backdropFilter: isScrolled ? 'none' : 'blur(10px)',
-                '&:hover': { 
+                '&:hover': {
                   borderColor: isScrolled ? '#9ca3af' : 'rgba(55, 65, 81, 0.5)',
                   backgroundColor: isScrolled ? '#f9fafb' : 'rgba(255, 255, 255, 0.9)',
                   borderWidth: 1.5
@@ -391,9 +391,9 @@ export default function Home() {
             >
               Get Started
             </Button>
-            <Button 
+            <Button
               variant="contained"
-              sx={{ 
+              sx={{
                 backgroundColor: '#3b82f6',
                 color: 'white',
                 fontWeight: 600,
@@ -402,13 +402,13 @@ export default function Home() {
                 px: 3,
                 py: 1.2,
                 borderRadius: 2,
-                boxShadow: isScrolled 
-                  ? '0 1px 2px 0 rgba(0, 0, 0, 0.05)' 
+                boxShadow: isScrolled
+                  ? '0 1px 2px 0 rgba(0, 0, 0, 0.05)'
                   : '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
                 fontFamily: 'Inter, system-ui, sans-serif',
-                '&:hover': { 
+                '&:hover': {
                   backgroundColor: '#2563eb',
-                  boxShadow: isScrolled 
+                  boxShadow: isScrolled
                     ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
                     : '0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 4px 6px -1px rgba(0, 0, 0, 0.1)'
                 }
@@ -485,9 +485,9 @@ export default function Home() {
       </AppBar>
 
       {/* Hero Section */}
-      <Box sx={{ 
-        pt: { xs: 6, md: 7 }, 
-        pb: { xs: 8, md: 12 }, 
+      <Box sx={{
+        pt: { xs: 6, md: 7 },
+        pb: { xs: 8, md: 12 },
         background: 'linear-gradient(135deg, #f0f9ff 0%, #f8fafc 50%, #ffffff 100%)',
         minHeight: '100vh',
         display: 'flex',
@@ -505,15 +505,15 @@ export default function Home() {
           background: 'radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.03) 0%, transparent 50%)',
           pointerEvents: 'none'
         }} />
-        
+
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
           <Grid container spacing={{ xs: 4, lg: 8 }} alignItems="center">
             {/* Left Content Area */}
             <Grid item xs={12} lg={7}>
               {/* Tagline Pill */}
-              <Box sx={{ 
-                display: 'inline-flex', 
-                alignItems: 'center', 
+              <Box sx={{
+                display: 'inline-flex',
+                alignItems: 'center',
                 gap: 1,
                 backgroundColor: '#dbeafe',
                 color: '#1e40af',
@@ -530,8 +530,8 @@ export default function Home() {
               </Box>
 
               {/* Main Headline */}
-              <Typography variant="h1" sx={{ 
-                fontWeight: 800, 
+              <Typography variant="h1" sx={{
+                fontWeight: 800,
                 mb: 0,
                 fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '4rem' },
                 lineHeight: 1.1,
@@ -539,13 +539,13 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}>
                 Transform Your{' '}
-                <Box component="span" sx={{ 
+                <Box component="span" sx={{
                   color: '#3b82f6',
                   position: 'relative'
                 }}>
                   Business
                 </Box>{' '}
-                <Box component="span" sx={{ 
+                <Box component="span" sx={{
                   color: '#7c3aed',
                   position: 'relative'
                 }}>
@@ -555,33 +555,33 @@ export default function Home() {
               </Typography>
 
               {/* Description */}
-              <Typography variant="h6" sx={{ 
-                color: '#64748b', 
-                mb: 4, 
+              <Typography variant="h6" sx={{
+                color: '#64748b',
+                mb: 4,
                 lineHeight: 1.6,
                 fontSize: { xs: '1rem', md: '1.125rem' },
                 maxWidth: '600px',
                 fontWeight: 400
               }}>
-                RECUD specializes in designing and developing cutting-edge business process management software 
+                RECUD specializes in designing and developing cutting-edge business process management software
                 tailored for various industries. Automate, optimize, and scale your operations with our proven solutions.
               </Typography>
 
               {/* CTA Buttons */}
               <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, mb: 6 }}>
-                <Button 
-                  variant="contained" 
+                <Button
+                  variant="contained"
                   size="large"
                   endIcon={<ArrowForward sx={{ fontSize: 20 }} />}
-                  sx={{ 
-                    px: 4, 
-                    py: 1.5, 
-                    fontSize: '1.125rem', 
+                  sx={{
+                    px: 4,
+                    py: 1.5,
+                    fontSize: '1.125rem',
                     borderRadius: 2,
                     backgroundColor: '#3b82f6',
                     fontWeight: 600,
                     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                    '&:hover': { 
+                    '&:hover': {
                       backgroundColor: '#2563eb',
                       boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
                     }
@@ -589,20 +589,20 @@ export default function Home() {
                 >
                   Get Started Today →
                 </Button>
-                <Button 
-                  variant="outlined" 
+                <Button
+                  variant="outlined"
                   size="large"
                   startIcon={<Box component="span" sx={{ fontSize: '1.5rem', color: '#64748b' }}>▷</Box>}
-                  sx={{ 
-                    px: 4, 
-                    py: 1.5, 
-                    fontSize: '1.125rem', 
+                  sx={{
+                    px: 4,
+                    py: 1.5,
+                    fontSize: '1.125rem',
                     borderRadius: 2,
                     borderColor: '#d1d5db',
                     color: '#374151',
                     fontWeight: 500,
                     borderWidth: 1.5,
-                    '&:hover': { 
+                    '&:hover': {
                       borderColor: '#9ca3af',
                       backgroundColor: '#f9fafb',
                       borderWidth: 1.5
@@ -616,8 +616,8 @@ export default function Home() {
               {/* Statistics Section */}
               <Box sx={{ display: 'flex', gap: { xs: 3, md: 6 }, flexWrap: 'wrap' }}>
                 <Box sx={{ textAlign: 'left' }}>
-                  <Typography variant="h2" sx={{ 
-                    fontWeight: 800, 
+                  <Typography variant="h2" sx={{
+                    fontWeight: 800,
                     background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
                     backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',
@@ -628,8 +628,8 @@ export default function Home() {
                   }}>
                     500+
                   </Typography>
-                  <Typography variant="body2" sx={{ 
-                    color: '#64748b', 
+                  <Typography variant="body2" sx={{
+                    color: '#64748b',
                     fontWeight: 500,
                     fontSize: '0.875rem'
                   }}>
@@ -637,8 +637,8 @@ export default function Home() {
                   </Typography>
                 </Box>
                 <Box sx={{ textAlign: 'left' }}>
-                  <Typography variant="h2" sx={{ 
-                    fontWeight: 800, 
+                  <Typography variant="h2" sx={{
+                    fontWeight: 800,
                     background: 'linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%)',
                     backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',
@@ -649,8 +649,8 @@ export default function Home() {
                   }}>
                     50+
                   </Typography>
-                  <Typography variant="body2" sx={{ 
-                    color: '#64748b', 
+                  <Typography variant="body2" sx={{
+                    color: '#64748b',
                     fontWeight: 500,
                     fontSize: '0.875rem'
                   }}>
@@ -658,8 +658,8 @@ export default function Home() {
                   </Typography>
                 </Box>
                 <Box sx={{ textAlign: 'left' }}>
-                  <Typography variant="h2" sx={{ 
-                    fontWeight: 800, 
+                  <Typography variant="h2" sx={{
+                    fontWeight: 800,
                     background: 'linear-gradient(135deg, #10b981 0%, #14b8a6 100%)',
                     backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',
@@ -670,8 +670,8 @@ export default function Home() {
                   }}>
                     99%
                   </Typography>
-                  <Typography variant="body2" sx={{ 
-                    color: '#64748b', 
+                  <Typography variant="body2" sx={{
+                    color: '#64748b',
                     fontWeight: 500,
                     fontSize: '0.875rem'
                   }}>
@@ -683,16 +683,16 @@ export default function Home() {
 
             {/* Right Content Area - Process Steps */}
             <Grid item xs={12} lg={5}>
-              <Box sx={{ 
-                display: 'flex', 
-                flexDirection: 'column', 
+              <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
                 gap: 3,
                 alignItems: { xs: 'center', lg: 'flex-start' }
               }}>
                 {/* Process Step 1 */}
-                <Box sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
+                <Box sx={{
+                  display: 'flex',
+                  alignItems: 'center',
                   gap: 3,
                   p: 3,
                   borderRadius: 3,
@@ -704,10 +704,10 @@ export default function Home() {
                     transform: 'translateY(-1px)'
                   }
                 }}>
-                  <Box sx={{ 
-                    width: 56, 
-                    height: 56, 
-                    borderRadius: '50%', 
+                  <Box sx={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: '50%',
                     backgroundColor: '#3b82f6',
                     display: 'flex',
                     alignItems: 'center',
@@ -721,15 +721,15 @@ export default function Home() {
                     1
                   </Box>
                   <Box sx={{ flex: 1 }}>
-                    <Typography variant="h6" sx={{ 
-                      fontWeight: 600, 
+                    <Typography variant="h6" sx={{
+                      fontWeight: 600,
                       color: '#1e293b',
                       fontSize: '1.125rem',
                       mb: 0.5
                     }}>
                       Data Input
                     </Typography>
-                    <Typography variant="body2" sx={{ 
+                    <Typography variant="body2" sx={{
                       color: '#64748b',
                       fontSize: '0.875rem'
                     }}>
@@ -739,9 +739,9 @@ export default function Home() {
                 </Box>
 
                 {/* Process Step 2 */}
-                <Box sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
+                <Box sx={{
+                  display: 'flex',
+                  alignItems: 'center',
                   gap: 3,
                   p: 3,
                   borderRadius: 3,
@@ -753,10 +753,10 @@ export default function Home() {
                     transform: 'translateY(-1px)'
                   }
                 }}>
-                  <Box sx={{ 
-                    width: 56, 
-                    height: 56, 
-                    borderRadius: '50%', 
+                  <Box sx={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: '50%',
                     backgroundColor: '#7c3aed',
                     display: 'flex',
                     alignItems: 'center',
@@ -770,15 +770,15 @@ export default function Home() {
                     2
                   </Box>
                   <Box sx={{ flex: 1 }}>
-                    <Typography variant="h6" sx={{ 
-                      fontWeight: 600, 
+                    <Typography variant="h6" sx={{
+                      fontWeight: 600,
                       color: '#1e293b',
                       fontSize: '1.125rem',
                       mb: 0.5
                     }}>
                       Process Automation
                     </Typography>
-                    <Typography variant="body2" sx={{ 
+                    <Typography variant="body2" sx={{
                       color: '#64748b',
                       fontSize: '0.875rem'
                     }}>
@@ -788,9 +788,9 @@ export default function Home() {
                 </Box>
 
                 {/* Process Step 3 */}
-                <Box sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
+                <Box sx={{
+                  display: 'flex',
+                  alignItems: 'center',
                   gap: 3,
                   p: 3,
                   borderRadius: 3,
@@ -802,10 +802,10 @@ export default function Home() {
                     transform: 'translateY(-1px)'
                   }
                 }}>
-                  <Box sx={{ 
-                    width: 56, 
-                    height: 56, 
-                    borderRadius: '50%', 
+                  <Box sx={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: '50%',
                     backgroundColor: '#10b981',
                     display: 'flex',
                     alignItems: 'center',
@@ -819,15 +819,15 @@ export default function Home() {
                     3
                   </Box>
                   <Box sx={{ flex: 1 }}>
-                    <Typography variant="h6" sx={{ 
-                      fontWeight: 600, 
+                    <Typography variant="h6" sx={{
+                      fontWeight: 600,
                       color: '#1e293b',
                       fontSize: '1.125rem',
                       mb: 0.5
                     }}>
                       Analytics & Insights
                     </Typography>
-                    <Typography variant="body2" sx={{ 
+                    <Typography variant="body2" sx={{
                       color: '#64748b',
                       fontSize: '0.875rem'
                     }}>
@@ -837,9 +837,9 @@ export default function Home() {
                 </Box>
 
                 {/* Process Step 4 */}
-                <Box sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
+                <Box sx={{
+                  display: 'flex',
+                  alignItems: 'center',
                   gap: 3,
                   p: 3,
                   borderRadius: 3,
@@ -851,10 +851,10 @@ export default function Home() {
                     transform: 'translateY(-1px)'
                   }
                 }}>
-                  <Box sx={{ 
-                    width: 56, 
-                    height: 56, 
-                    borderRadius: '50%', 
+                  <Box sx={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: '50%',
                     backgroundColor: '#f59e0b',
                     display: 'flex',
                     alignItems: 'center',
@@ -868,15 +868,15 @@ export default function Home() {
                     4
                   </Box>
                   <Box sx={{ flex: 1 }}>
-                    <Typography variant="h6" sx={{ 
-                      fontWeight: 600, 
+                    <Typography variant="h6" sx={{
+                      fontWeight: 600,
                       color: '#1e293b',
                       fontSize: '1.125rem',
                       mb: 0.5
                     }}>
                       Optimization
                     </Typography>
-                    <Typography variant="body2" sx={{ 
+                    <Typography variant="body2" sx={{
                       color: '#64748b',
                       fontSize: '0.875rem'
                     }}>
@@ -891,8 +891,8 @@ export default function Home() {
       </Box>
 
       {/* Services Section */}
-      <Box id="services" sx={{ 
-        py: { xs: 10, md: 20 }, 
+      <Box id="services" sx={{
+        py: { xs: 10, md: 20 },
         backgroundColor: 'white',
         position: 'relative'
       }}>
@@ -938,7 +938,7 @@ export default function Home() {
                   }
                 }}>
                   {/* Icon */}
-                  <Box sx={{ 
+                  <Box sx={{
                     mb: 3,
                     width: 48,
                     height: 48,
@@ -953,15 +953,15 @@ export default function Home() {
                   </Box>
 
                   {/* Content */}
-                  <Typography variant="h5" sx={{ 
+                  <Typography variant="h5" sx={{
                     fontWeight: 800,
                     color: '#0f172a',
                     mb: 1
                   }}>
                     {service.title}
                   </Typography>
-                  
-                  <Typography sx={{ 
+
+                  <Typography sx={{
                     color: '#475569',
                     mb: 2,
                     flexGrow: 1
@@ -972,7 +972,7 @@ export default function Home() {
                   {/* Features List */}
                   <Box sx={{ mb: 3 }}>
                     {service.features.map((feature, idx) => (
-                      <Box key={idx} sx={{ 
+                      <Box key={idx} sx={{
                         display: 'flex',
                         alignItems: 'center',
                         gap: 1,
@@ -980,7 +980,7 @@ export default function Home() {
                         color: '#334155'
                       }}>
                         <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
-                        <Typography sx={{ 
+                        <Typography sx={{
                           color: '#334155',
                           fontSize: '0.9375rem'
                         }}>
@@ -1015,7 +1015,7 @@ export default function Home() {
           </Grid>
 
           {/* CTA Section */}
-          <Box sx={{ 
+          <Box sx={{
             mt: 12,
             p: { xs: 4, md: 8 },
             borderRadius: 4,
@@ -1032,7 +1032,7 @@ export default function Home() {
             }}>
               Ready to Transform Your Business?
             </Typography>
-            
+
             <Typography sx={{
               color: '#64748b',
               mb: 4,
@@ -1042,8 +1042,8 @@ export default function Home() {
             }}>
               Let's discuss how our BPM solutions can help you achieve operational excellence and drive sustainable growth.
             </Typography>
-            
-            <Box sx={{ 
+
+            <Box sx={{
               display: 'flex',
               flexDirection: { xs: 'column', sm: 'row' },
               gap: 2,
@@ -1066,7 +1066,7 @@ export default function Home() {
               >
                 Schedule Consultation →
               </Button>
-              
+
               <Button
                 variant="outlined"
                 sx={{
@@ -1113,13 +1113,13 @@ export default function Home() {
               Tailored BPM solutions designed for the unique challenges and requirements of your industry.
             </Typography>
           </Box>
-          
+
           <Grid container spacing={4} alignItems="stretch">
             {/* Financial Services */}
             <Grid item xs={12} md={6}>
-              <Card sx={{ 
-                p: 4, 
-                borderRadius: 3, 
+              <Card sx={{
+                p: 4,
+                borderRadius: 3,
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
@@ -1146,7 +1146,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
                       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
-                        {['Digital onboarding','Risk assessment','Regulatory compliance','Fraud detection'].map((item, i) => (
+                        {['Digital onboarding', 'Risk assessment', 'Regulatory compliance', 'Fraud detection'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1157,7 +1157,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                        {['85% faster processing','40% cost reduction','99.9% accuracy'].map((item, i) => (
+                        {['85% faster processing', '40% cost reduction', '99.9% accuracy'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1172,9 +1172,9 @@ export default function Home() {
 
             {/* E-commerce & Retail */}
             <Grid item xs={12} md={6}>
-              <Card sx={{ 
-                p: 4, 
-                borderRadius: 3, 
+              <Card sx={{
+                p: 4,
+                borderRadius: 3,
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
@@ -1201,7 +1201,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
                       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
-                        {['Order processing','Inventory optimization','Returns management','Customer support'].map((item, i) => (
+                        {['Order processing', 'Inventory optimization', 'Returns management', 'Customer support'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1212,7 +1212,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                        {['60% faster fulfillment','30% fewer returns','25% cost savings'].map((item, i) => (
+                        {['60% faster fulfillment', '30% fewer returns', '25% cost savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1227,9 +1227,9 @@ export default function Home() {
 
             {/* Logistics & Transportation */}
             <Grid item xs={12} md={6}>
-              <Card sx={{ 
-                p: 4, 
-                borderRadius: 3, 
+              <Card sx={{
+                p: 4,
+                borderRadius: 3,
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
@@ -1256,7 +1256,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
                       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
-                        {['Fleet Management','Delivery Tracking','Route Optimization','Driver Management'].map((item, i) => (
+                        {['Fleet Management', 'Delivery Tracking', 'Route Optimization', 'Driver Management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1267,7 +1267,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                        {['40% route efficiency','90% on-time delivery','50% fuel savings'].map((item, i) => (
+                        {['40% route efficiency', '90% on-time delivery', '50% fuel savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1282,9 +1282,9 @@ export default function Home() {
 
             {/* Healthcare & Life Sciences */}
             <Grid item xs={12} md={6}>
-              <Card sx={{ 
-                p: 4, 
-                borderRadius: 3, 
+              <Card sx={{
+                p: 4,
+                borderRadius: 3,
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
@@ -1311,7 +1311,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
                       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
-                        {['Patient onboarding','Clinical workflows','HIPAA compliance','Claims processing'].map((item, i) => (
+                        {['Patient onboarding', 'Clinical workflows', 'HIPAA compliance', 'Claims processing'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1322,7 +1322,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                        {['70% faster onboarding','90% compliance rate','50% error reduction'].map((item, i) => (
+                        {['70% faster onboarding', '90% compliance rate', '50% error reduction'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1337,9 +1337,9 @@ export default function Home() {
 
             {/* Education & Training */}
             <Grid item xs={12} md={6}>
-              <Card sx={{ 
-                p: 4, 
-                borderRadius: 3, 
+              <Card sx={{
+                p: 4,
+                borderRadius: 3,
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
@@ -1366,7 +1366,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
                       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
-                        {['Student enrollment','Course management','Certification tracking','Alumni management'].map((item, i) => (
+                        {['Student enrollment', 'Course management', 'Certification tracking', 'Alumni management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1377,7 +1377,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                        {['80% faster enrollment','60% admin time saved','95% satisfaction rate'].map((item, i) => (
+                        {['80% faster enrollment', '60% admin time saved', '95% satisfaction rate'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1392,9 +1392,9 @@ export default function Home() {
 
             {/* Government & Public Sector */}
             <Grid item xs={12} md={6}>
-              <Card sx={{ 
-                p: 4, 
-                borderRadius: 3, 
+              <Card sx={{
+                p: 4,
+                borderRadius: 3,
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
@@ -1421,7 +1421,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
                       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
-                        {['Permit Processing','Regulatory Compliance','Citizen Services','Public Records'].map((item, i) => (
+                        {['Permit Processing', 'Regulatory Compliance', 'Citizen Services', 'Public Records'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1432,7 +1432,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                        {['70% faster processing','99% transparency','60% cost savings'].map((item, i) => (
+                        {['70% faster processing', '99% transparency', '60% cost savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1455,7 +1455,7 @@ export default function Home() {
               With deep domain knowledge and proven methodologies, we help organizations in every sector achieve operational excellence through tailored BPM solutions.
             </Typography>
             <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap', opacity: 0.95 }}>
-              {[ '50+ Industries Served', '1000+ Successful Implementations', '99.9% Client Satisfaction' ].map((text, i) => (
+              {['50+ Industries Served', '1000+ Successful Implementations', '99.9% Client Satisfaction'].map((text, i) => (
                 <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
                   <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.9)' }} />
                   <Typography sx={{ fontWeight: 600 }}>{text}</Typography>
@@ -1474,8 +1474,8 @@ export default function Home() {
               <Typography variant="overline" sx={{ color: '#64748b', letterSpacing: '0.08em', fontWeight: 700 }}>
                 ABOUT RECUD
               </Typography>
-              <Typography variant="h1" component="h2" sx={{ 
-                fontWeight: 800, 
+              <Typography variant="h1" component="h2" sx={{
+                fontWeight: 800,
                 mb: 2,
                 fontSize: { xs: '1.875rem', sm: '2.125rem', md: '2.5rem', lg: '2.625rem' },
                 lineHeight: 1.1,
@@ -1485,12 +1485,12 @@ export default function Home() {
                 Pioneering the Future of Business Process Management
               </Typography>
               <Typography variant="body1" sx={{ color: '#6b7280', mb: 2, maxWidth: 720, fontSize: { xs: '0.95rem', md: '1rem' } }}>
-                Founded in 2015, Recud has emerged as a leading force in business process management. We specialize in designing and 
-                developing sophisticated BPM software solutions that help organizations across various industries streamline their operations, 
+                Founded in 2015, Recud has emerged as a leading force in business process management. We specialize in designing and
+                developing sophisticated BPM software solutions that help organizations across various industries streamline their operations,
                 reduce costs, and achieve sustainable growth.
               </Typography>
               <Typography variant="body1" sx={{ color: '#6b7280', mb: 4, maxWidth: 720, fontSize: { xs: '0.95rem', md: '1rem' } }}>
-                Our team of experts combines deep industry knowledge with cutting-edge technology to deliver tailored solutions that address the 
+                Our team of experts combines deep industry knowledge with cutting-edge technology to deliver tailored solutions that address the
                 unique challenges of each client. We believe in building long-term partnerships that drive continuous innovation and operational excellence.
               </Typography>
 
@@ -1502,14 +1502,14 @@ export default function Home() {
                   { icon: <Public sx={{ color: '#2563eb' }} />, title: 'Global Impact', desc: 'We help organizations worldwide achieve operational excellence and sustainable growth.' }
                 ].map((item, i) => (
                   <Box key={i} sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, alignItems: 'start' }}>
-                    <Box sx={{ 
-                      width: 40, 
-                      height: 40, 
-                      borderRadius: '50%', 
-                      background: 'radial-gradient(circle at 30% 30%, #eff6ff 0%, #eaf2ff 60%, #e5edff 100%)', 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center', 
+                    <Box sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      background: 'radial-gradient(circle at 30% 30%, #eff6ff 0%, #eaf2ff 60%, #e5edff 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       boxShadow: 'inset 0 0 0 1px #dbeafe'
                     }}>
                       {item.icon}
@@ -1526,7 +1526,8 @@ export default function Home() {
             <Grid item xs={12} md={5}>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
+                  <Box sx={{
+                    p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
                     boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
                   }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
@@ -1537,7 +1538,8 @@ export default function Home() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
+                  <Box sx={{
+                    p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
                     boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
                   }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
@@ -1548,7 +1550,8 @@ export default function Home() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
+                  <Box sx={{
+                    p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
                     boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
                   }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
@@ -1559,7 +1562,8 @@ export default function Home() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
+                  <Box sx={{
+                    p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
                     boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
                   }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
@@ -1571,10 +1575,10 @@ export default function Home() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <Box sx={{ 
-                    p: { xs: 3, md: 4 }, 
-                    borderRadius: 4, 
-                    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)', 
+                  <Box sx={{
+                    p: { xs: 3, md: 4 },
+                    borderRadius: 4,
+                    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
                     color: 'white',
                     border: '1px solid rgba(255,255,255,0.15)',
                     boxShadow: '0 20px 45px rgba(59,130,246,.25)'
@@ -1608,17 +1612,17 @@ export default function Home() {
       <Box id="contact" sx={{ py: 14, backgroundColor: '#f8fafc' }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h3" component="h2" sx={{ 
-              fontWeight: 800, 
-              mb: 1, 
+            <Typography variant="h3" component="h2" sx={{
+              fontWeight: 800,
+              mb: 1,
               color: '#0f172a',
               fontFamily: 'Inter, system-ui, sans-serif'
             }}>
               Let's Build Your Success Together
             </Typography>
-            <Typography variant="h6" sx={{ 
-              color: '#475569', 
-              maxWidth: '780px', 
+            <Typography variant="h6" sx={{
+              color: '#475569',
+              maxWidth: '780px',
               mx: 'auto',
               fontFamily: 'Inter, system-ui, sans-serif'
             }}>
@@ -1631,8 +1635,8 @@ export default function Home() {
             <Grid item xs={12} md={5}>
               <Box sx={{ display: 'grid', gap: 2.5 }}>
                 {/* Left column heading to match design */}
-                <Typography variant="h6" sx={{ 
-                  fontWeight: 800, 
+                <Typography variant="h6" sx={{
+                  fontWeight: 800,
                   color: '#0f172a',
                   fontFamily: 'Inter, system-ui, sans-serif'
                 }}>
@@ -1649,17 +1653,17 @@ export default function Home() {
                       {item.icon}
                     </Box>
                     <Box>
-                      <Typography variant="subtitle1" sx={{ 
-                        fontWeight: 700, 
+                      <Typography variant="subtitle1" sx={{
+                        fontWeight: 700,
                         color: '#0f172a',
                         fontFamily: 'Inter, system-ui, sans-serif'
                       }}>{item.title}</Typography>
-                      <Typography variant="body2" sx={{ 
-                        color: '#1f2c3b', 
+                      <Typography variant="body2" sx={{
+                        color: '#1f2c3b',
                         fontWeight: 600,
                         fontFamily: 'Inter, system-ui, sans-serif'
                       }}>{item.desc}</Typography>
-                      <Typography variant="body2" sx={{ 
+                      <Typography variant="body2" sx={{
                         color: '#6b7280',
                         fontFamily: 'Inter, system-ui, sans-serif'
                       }}>{item.sub}</Typography>
@@ -1668,9 +1672,9 @@ export default function Home() {
                 ))}
 
                 <Box sx={{ mt: 1, p: 3, borderRadius: 2.5, backgroundColor: 'white', border: '1px solid #e5e7eb' }}>
-                  <Typography variant="subtitle1" sx={{ 
-                    fontWeight: 800, 
-                    color: '#0f172a', 
+                  <Typography variant="subtitle1" sx={{
+                    fontWeight: 800,
+                    color: '#0f172a',
                     mb: 1.5,
                     fontFamily: 'Inter, system-ui, sans-serif'
                   }}>
@@ -1690,9 +1694,9 @@ export default function Home() {
 
             <Grid item xs={12} md={7}>
               <Card sx={{ p: { xs: 3, md: 4 }, borderRadius: 3, border: '1px solid #e5e7eb', boxShadow: '0 8px 20px rgba(0,0,0,0.06)' }}>
-                <Typography variant="h6" sx={{ 
-                  fontWeight: 800, 
-                  mb: 2, 
+                <Typography variant="h6" sx={{
+                  fontWeight: 800,
+                  mb: 2,
                   color: '#0f172a',
                   fontFamily: 'Inter, system-ui, sans-serif'
                 }}>
@@ -1734,20 +1738,20 @@ export default function Home() {
                 </Grid>
                 <FormControlLabel sx={{ mt: 1 }} control={<Checkbox />} label={"I agree to receive updates and newsletters from Recud. I can unsubscribe at any time."} />
 
-                <Button 
-                  variant="contained" 
-                  fullWidth 
+                <Button
+                  variant="contained"
+                  fullWidth
                   startIcon={<Box sx={{ width: 22, height: 22, borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.15)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><Mail sx={{ fontSize: 16 }} /></Box>}
                   endIcon={<Send sx={{ fontSize: 18 }} />}
-                  sx={{ 
-                    mt: 2, 
-                    py: 1.5, 
-                    backgroundColor: '#2563eb', 
-                    borderRadius: 2, 
-                    textTransform: 'none', 
-                    fontWeight: 700, 
+                  sx={{
+                    mt: 2,
+                    py: 1.5,
+                    backgroundColor: '#2563eb',
+                    borderRadius: 2,
+                    textTransform: 'none',
+                    fontWeight: 700,
                     fontFamily: 'Inter, system-ui, sans-serif',
-                    '&:hover': { backgroundColor: '#1d4ed8' } 
+                    '&:hover': { backgroundColor: '#1d4ed8' }
                   }}
                 >
                   Send Message
@@ -1756,70 +1760,219 @@ export default function Home() {
             </Grid>
           </Grid>
         </Container>
+
+        {/* Contact Us CTA */}
+        <Box sx={{
+          mt: 6,
+          p: { xs: 3, md: 5 },
+          borderRadius: 3,
+          background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)',
+          color: 'white',
+          textAlign: 'center',
+          maxWidth: { xs: '92%', sm: '93%', md: '83%', lg: '73%', xl: '62%' },
+          mx: 'auto',
+          width: '100%'
+        }}>
+          <Typography variant="h4" sx={{
+            fontWeight: 800,
+            mb: 1,
+            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem', lg: '2.25rem' }
+          }}>
+            Start Your Digital Transformation Journey
+          </Typography>
+          <Typography sx={{
+            opacity: 0.95,
+            mb: 3,
+            maxWidth: { xs: '100%', sm: '90%', md: '80%', lg: '70%' },
+            mx: 'auto',
+            fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem' }
+          }}>
+            Join 500+ organizations that have transformed their business processes with RECUD. Let's discuss how we can help you achieve your goals.
+          </Typography>
+          <Box sx={{
+            display: 'flex',
+            gap: { xs: 2, sm: 3, md: 4 },
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            opacity: 0.95,
+            flexDirection: { xs: 'column', sm: 'row' },
+            alignItems: 'center'
+          }}>
+            {['Free Consultation', 'No Obligation Quote', 'Custom Solution Design'].map((text, i) => (
+              <Box key={i} sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1.25,
+                minWidth: { xs: 'auto', sm: '200px' },
+                justifyContent: { xs: 'center', sm: 'flex-start' }
+              }}>
+                <Box sx={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(255,255,255,0.9)',
+                  flexShrink: 0
+                }} />
+                <Typography sx={{
+                  fontWeight: 600,
+                  fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem' }
+                }}>
+                  {text}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+        </Box>
       </Box>
-      
+
       {/* Footer */}
       <Box sx={{ backgroundColor: '#111827', color: 'white', py: 12 }}>
         <Container maxWidth="lg">
           <Grid container spacing={4}>
             <Grid item xs={12} md={3}>
-              <Typography variant="h4" sx={{ 
-                fontWeight: 'bold', 
-                color: 'primary.400', 
+              <Typography variant="h4" sx={{
+                fontWeight: 'bold',
+                color: '#60a5fa',
                 mb: 2,
                 fontFamily: 'Inter, system-ui, sans-serif'
               }}>
                 RECUD
               </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+              <Typography variant="body2" sx={{ 
+                color: '#d1d5db',
+                fontFamily: 'Inter, system-ui, sans-serif',
+                lineHeight: 1.6
+              }}>
                 Transforming business operations through intelligent process management solutions.
               </Typography>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Typography variant="h6" sx={{ 
+              <Typography variant="h6" sx={{
                 mb: 2,
-                fontFamily: 'Inter, system-ui, sans-serif'
+                fontFamily: 'Inter, system-ui, sans-serif',
+                color: '#f9fafb',
+                fontWeight: 600
               }}>
                 Services
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Process Automation</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Workflow Management</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Analytics & Insights</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Cloud Solutions</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Process Automation</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Workflow Management</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Analytics & Insights</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Cloud Solutions</Typography>
               </Box>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Typography variant="h6" sx={{ 
+              <Typography variant="h6" sx={{
                 mb: 2,
-                fontFamily: 'Inter, system-ui, sans-serif'
+                fontFamily: 'Inter, system-ui, sans-serif',
+                color: '#f9fafb',
+                fontWeight: 600
               }}>
                 Company
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>About Us</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Team</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Careers</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Contact</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>About Us</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Team</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Careers</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Contact</Typography>
               </Box>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Typography variant="h6" sx={{ 
+              <Typography variant="h6" sx={{
                 mb: 2,
-                fontFamily: 'Inter, system-ui, sans-serif'
+                fontFamily: 'Inter, system-ui, sans-serif',
+                color: '#f9fafb',
+                fontWeight: 600
               }}>
                 Connect
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>LinkedIn</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Twitter</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Blog</Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Newsletter</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>LinkedIn</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Twitter</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Blog</Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#d1d5db',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  '&:hover': { color: '#60a5fa' },
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}>Newsletter</Typography>
               </Box>
             </Grid>
           </Grid>
           <Box sx={{ borderTop: '1px solid #374151', mt: 8, pt: 8, textAlign: 'center' }}>
-            <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+            <Typography variant="body2" sx={{ 
+              color: '#9ca3af',
+              fontFamily: 'Inter, system-ui, sans-serif',
+              fontSize: '0.875rem'
+            }}>
               &copy; 2025 RECUD. All rights reserved.
             </Typography>
           </Box>

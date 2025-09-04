@@ -20,7 +20,9 @@ import {
   AccountBalance,
   ShoppingCart,
   PrecisionManufacturing,
-  HealthAndSafety
+  HealthAndSafety,
+  School,
+  Shield
 } from '@mui/icons-material';
 import { 
   AppBar, 
@@ -1145,6 +1147,94 @@ export default function Home() {
                       <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>RESULTS</Typography>
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['70% faster onboarding','90% compliance rate','50% error reduction'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#10b981' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            {/* Education & Training */}
+            <Grid item xs={12} md={6}>
+              <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
+                <CardContent sx={{ p: 0 }}>
+                  <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 3, alignItems: 'start' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <School sx={{ color: '#3b82f6' }} />
+                    </Box>
+                    <Box>
+                      <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827', mb: 0.5 }}>Education & Training</Typography>
+                      <Typography variant="body1" sx={{ color: '#6b7280' }}>
+                        Automate student enrollment, course management, and administrative processes for educational institutions.
+                      </Typography>
+                    </Box>
+                  </Box>
+
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>KEY SOLUTIONS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['Student enrollment','Course management','Certification tracking','Alumni management'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>RESULTS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['80% faster enrollment','60% admin time saved','95% satisfaction rate'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#10b981' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            {/* Government & Public Sector */}
+            <Grid item xs={12} md={6}>
+              <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
+                <CardContent sx={{ p: 0 }}>
+                  <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 3, alignItems: 'start' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <Shield sx={{ color: '#3b82f6' }} />
+                    </Box>
+                    <Box>
+                      <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827', mb: 0.5 }}>Government & Public Sector</Typography>
+                      <Typography variant="body1" sx={{ color: '#6b7280' }}>
+                        Modernize government services, citizen engagement, and regulatory processes with secure BPM solutions.
+                      </Typography>
+                    </Box>
+                  </Box>
+
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>KEY SOLUTIONS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['Citizen services','Permit processing','Regulatory compliance','Public records'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>RESULTS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['75% faster processing','60% cost savings','99.5% uptime'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
                             <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>

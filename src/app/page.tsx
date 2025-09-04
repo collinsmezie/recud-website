@@ -1115,7 +1115,7 @@ export default function Home() {
             </Typography>
           </Box>
           
-          <Grid container spacing={4}>
+          <Grid container spacing={4} alignItems="stretch">
             {/* Financial Services */}
             <Grid item xs={12} md={6}>
               <Card sx={{ 
@@ -1125,9 +1125,12 @@ export default function Home() {
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
                 background: 'linear-gradient(180deg, #ffffff 0%, #fbfdff 100%)',
-                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' }
+                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' },
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column'
               }}>
-                <CardContent sx={{ p: 0 }}>
+                <CardContent sx={{ p: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 2.5, alignItems: 'start' }}>
                     <Box sx={{ width: 48, height: 48, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
                       <AccountBalance sx={{ color: '#2563eb' }} />
@@ -1177,9 +1180,12 @@ export default function Home() {
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
                 background: 'linear-gradient(180deg, #ffffff 0%, #fbfdff 100%)',
-                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' }
+                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' },
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column'
               }}>
-                <CardContent sx={{ p: 0 }}>
+                <CardContent sx={{ p: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 2.5, alignItems: 'start' }}>
                     <Box sx={{ width: 48, height: 48, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
                       <ShoppingCart sx={{ color: '#2563eb' }} />
@@ -1229,9 +1235,12 @@ export default function Home() {
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
                 background: 'linear-gradient(180deg, #ffffff 0%, #fbfdff 100%)',
-                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' }
+                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' },
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column'
               }}>
-                <CardContent sx={{ p: 0 }}>
+                <CardContent sx={{ p: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 2.5, alignItems: 'start' }}>
                     <Box sx={{ width: 48, height: 48, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
                       <PrecisionManufacturing sx={{ color: '#2563eb' }} />
@@ -1281,9 +1290,12 @@ export default function Home() {
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
                 background: 'linear-gradient(180deg, #ffffff 0%, #fbfdff 100%)',
-                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' }
+                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' },
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column'
               }}>
-                <CardContent sx={{ p: 0 }}>
+                <CardContent sx={{ p: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 2.5, alignItems: 'start' }}>
                     <Box sx={{ width: 48, height: 48, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
                       <HealthAndSafety sx={{ color: '#2563eb' }} />
@@ -1333,9 +1345,12 @@ export default function Home() {
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
                 background: 'linear-gradient(180deg, #ffffff 0%, #fbfdff 100%)',
-                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' }
+                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' },
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column'
               }}>
-                <CardContent sx={{ p: 0 }}>
+                <CardContent sx={{ p: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 2.5, alignItems: 'start' }}>
                     <Box sx={{ width: 48, height: 48, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
                       <School sx={{ color: '#2563eb' }} />
@@ -1385,9 +1400,12 @@ export default function Home() {
                 boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
                 transition: 'all .25s ease',
                 background: 'linear-gradient(180deg, #ffffff 0%, #fbfdff 100%)',
-                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' }
+                '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 16px 30px rgba(0,0,0,0.08)' },
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column'
               }}>
-                <CardContent sx={{ p: 0 }}>
+                <CardContent sx={{ p: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 2.5, alignItems: 'start' }}>
                     <Box sx={{ width: 48, height: 48, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
                       <Shield sx={{ color: '#2563eb' }} />
@@ -1413,6 +1431,17 @@ export default function Home() {
                       </Box>
                     </Grid>
                     <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['Citizen Services','Public Records'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
+                            <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['70% faster processing','99% transparency','60% cost savings'].map((item, i) => (
@@ -1428,9 +1457,27 @@ export default function Home() {
               </Card>
             </Grid>
           </Grid>
+
+          {/* Industries CTA (inside section) */}
+          <Box sx={{ mt: 6, p: { xs: 3, md: 5 }, borderRadius: 3, background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', textAlign: 'center' }}>
+            <Typography variant="h4" sx={{ fontWeight: 800, mb: 1 }}>
+              Expertise Across All Major Industries
+            </Typography>
+            <Typography sx={{ opacity: 0.95, mb: 3, maxWidth: 900, mx: 'auto' }}>
+              With deep domain knowledge and proven methodologies, we help organizations in every sector achieve operational excellence through tailored BPM solutions.
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap', opacity: 0.95 }}>
+              {[ '50+ Industries Served', '1000+ Successful Implementations', '99.9% Client Satisfaction' ].map((text, i) => (
+                <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
+                  <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.9)' }} />
+                  <Typography sx={{ fontWeight: 600 }}>{text}</Typography>
+                </Box>
+              ))}
+            </Box>
+          </Box>
         </Container>
       </Box>
-      
+
       {/* About Section */}
       <Box id="about" sx={{ py: 12, backgroundColor: 'white' }}>
         <Container maxWidth="lg">

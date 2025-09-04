@@ -225,58 +225,31 @@ export default function Home() {
     <div>
       {/* Navigation */}
       <AppBar position="fixed" elevation={0} sx={{ 
-        background: 'linear-gradient(135deg, #f0f9ff 0%, #f8fafc 50%, #ffffff 100%)',
-        backdropFilter: 'blur(8px)'
+        background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f0f9ff 100%)',
+        backdropFilter: 'blur(8px)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.05)'
       }}>
         <Toolbar sx={{ 
-          py: 0.75, 
-          px: { xs: 2, md: 3 },
-          minHeight: '60px !important'
+          py: 1, 
+          px: { xs: 2, md: 4 },
+          minHeight: '70px !important',
+          justifyContent: 'space-between'
         }}>
-          {/* Left Side - Logo and Brand */}
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flexGrow: 1 }}>
-            {/* Logo SVG */}
-            <Box 
-              component="img" 
-              src="/logo.svg" 
-              alt="RECUD Logo"
-              sx={{ 
-                height: 28,
-                width: 28,
-                filter: 'none',
-                backgroundColor: 'transparent',
-                background: 'none',
-                opacity: 0.7,
-                mixBlendMode: 'multiply',
-                transition: 'all 0.3s ease'
-              }}
-            />
-            
-            {/* Brand Text with Gradient */}
+          {/* Left Side - Logo */}
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Typography 
               variant="h4" 
               component="h1" 
               sx={{ 
-                background: 'linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #14b8a6 100%)',
+                background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
-                color: '#1e293b',
+                color: 'transparent',
                 fontWeight: 800,
-                fontSize: '1.85rem',
-                letterSpacing: '-0.025em',
-                textShadow: '0 2px 4px rgba(59, 130, 246, 0.1)',
-                position: 'relative',
-                '&::after': {
-                  content: '""',
-                  position: 'absolute',
-                  bottom: -2,
-                  left: 0,
-                  right: 0,
-                  height: 2,
-                  background: 'linear-gradient(90deg, #0ea5e9 0%, #06b6d4 50%, #14b8a6 100%)',
-                  borderRadius: 1,
-                  opacity: 0.3
-                }
+                fontSize: '2rem',
+                letterSpacing: '-0.02em',
+                fontFamily: 'Inter, system-ui, sans-serif',
+                textShadow: 'none'
               }}
             >
               RECUD
@@ -287,7 +260,7 @@ export default function Home() {
           <Box sx={{ 
             display: { xs: 'none', lg: 'flex' }, 
             alignItems: 'center', 
-            gap: 2.5,
+            gap: 3,
             position: 'absolute',
             left: '50%',
             transform: 'translateX(-50%)'
@@ -298,11 +271,12 @@ export default function Home() {
               sx={{ 
                 color: '#374151', 
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '0.95rem',
                 textTransform: 'none',
-                px: 1.5,
+                px: 2,
                 py: 0.5,
                 borderRadius: 1,
+                fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   color: '#1e293b',
                   backgroundColor: 'rgba(59, 130, 246, 0.05)'
@@ -317,11 +291,12 @@ export default function Home() {
               sx={{ 
                 color: '#374151', 
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '0.95rem',
                 textTransform: 'none',
-                px: 1.5,
+                px: 2,
                 py: 0.5,
                 borderRadius: 1,
+                fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   color: '#1e293b',
                   backgroundColor: 'rgba(59, 130, 246, 0.05)'
@@ -336,11 +311,12 @@ export default function Home() {
               sx={{ 
                 color: '#374151', 
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '0.95rem',
                 textTransform: 'none',
-                px: 1.5,
+                px: 2,
                 py: 0.5,
                 borderRadius: 1,
+                fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   color: '#1e293b',
                   backgroundColor: 'rgba(59, 130, 246, 0.05)'
@@ -355,11 +331,12 @@ export default function Home() {
               sx={{ 
                 color: '#374151', 
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '0.95rem',
                 textTransform: 'none',
-                px: 1.5,
+                px: 2,
                 py: 0.5,
                 borderRadius: 1,
+                fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   color: '#1e293b',
                   backgroundColor: 'rgba(59, 130, 246, 0.05)'
@@ -374,7 +351,7 @@ export default function Home() {
           <Box sx={{ 
             display: { xs: 'none', md: 'flex' }, 
             alignItems: 'center', 
-            gap: 1
+            gap: 1.5
           }}>
             <Button 
               variant="outlined"
@@ -384,10 +361,11 @@ export default function Home() {
                 fontWeight: 500,
                 fontSize: '0.9rem',
                 textTransform: 'none',
-                px: 2.5,
-                py: 1,
-                borderRadius: 1.5,
+                px: 3,
+                py: 1.2,
+                borderRadius: 2,
                 borderWidth: 1.5,
+                fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   borderColor: '#9ca3af',
                   backgroundColor: '#f9fafb',
@@ -402,13 +380,14 @@ export default function Home() {
               sx={{ 
                 backgroundColor: '#3b82f6',
                 color: 'white',
-                fontWeight: 500,
+                fontWeight: 600,
                 fontSize: '0.9rem',
                 textTransform: 'none',
-                px: 2.5,
-                py: 1,
-                borderRadius: 1.5,
+                px: 3,
+                py: 1.2,
+                borderRadius: 2,
                 boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   backgroundColor: '#2563eb',
                   boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'

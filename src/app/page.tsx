@@ -1157,7 +1157,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['85% faster processing','40% cost reduction','99.9% accuracy'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1209,7 +1209,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['60% faster fulfillment','30% fewer returns','25% cost savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1220,7 +1220,7 @@ export default function Home() {
               </Card>
             </Grid>
 
-            {/* Manufacturing & Logistics */}
+            {/* Logistics & Transportation */}
             <Grid item xs={12} md={6}>
               <Card sx={{ 
                 p: 4, 
@@ -1237,9 +1237,9 @@ export default function Home() {
                       <PrecisionManufacturing sx={{ color: '#2563eb' }} />
                     </Box>
                     <Box>
-                      <Typography variant="h5" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>Manufacturing & Logistics</Typography>
+                      <Typography variant="h5" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>Logistics & Transportation</Typography>
                       <Typography variant="body1" sx={{ color: '#475569' }}>
-                        Optimize production processes, supply chain management, and quality control systems.
+                        Streamline fleet management, route optimization, and delivery tracking for logistics companies.
                       </Typography>
                     </Box>
                   </Box>
@@ -1248,7 +1248,7 @@ export default function Home() {
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
                       <Box sx={{ display: 'grid', gap: 1 }}>
-                        {['Production planning','Quality control','Supply chain visibility','Asset management'].map((item, i) => (
+                        {['Fleet Management','Delivery Tracking','Route Optimization','Driver Management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1259,9 +1259,9 @@ export default function Home() {
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'grid', gap: 1 }}>
-                        {['50% faster production','35% quality improvement','45% cost reduction'].map((item, i) => (
+                        {['40% route efficiency','90% on-time delivery','50% fuel savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1313,7 +1313,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['70% faster onboarding','90% compliance rate','50% error reduction'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1365,7 +1365,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['80% faster enrollment','60% admin time saved','95% satisfaction rate'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1395,7 +1395,7 @@ export default function Home() {
                     <Box>
                       <Typography variant="h5" sx={{ fontWeight: 800, color: '#0f172a', mb: 0.5 }}>Government & Public Sector</Typography>
                       <Typography variant="body1" sx={{ color: '#475569' }}>
-                        Modernize public services, document management, and citizen engagement processes.
+                        Improve citizen services, permit processing, and regulatory compliance for government agencies.
                       </Typography>
                     </Box>
                   </Box>
@@ -1404,7 +1404,7 @@ export default function Home() {
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
                       <Box sx={{ display: 'grid', gap: 1 }}>
-                        {['Case management','Citizen services','Document workflows','E-signature & approvals'].map((item, i) => (
+                        {['Permit Processing','Regulatory Compliance'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
@@ -1415,9 +1415,9 @@ export default function Home() {
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
                       <Box sx={{ display: 'grid', gap: 1 }}>
-                        {['45% faster service delivery','30% operational savings','Higher citizen satisfaction'].map((item, i) => (
+                        {['70% faster processing','99% transparency','60% cost savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}

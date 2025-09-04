@@ -28,7 +28,7 @@ import {
   Groups,
   Public,
   TrendingUp,
-  CheckCircle,
+  TaskAlt,
   AccessTime,
   HeadsetMic,
   Send
@@ -980,7 +980,7 @@ export default function Home() {
                         mb: 0.75,
                         color: '#334155'
                       }}>
-                        <CheckCircle sx={{ fontSize: 18, color: '#10b981' }} />
+                        <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                         <Typography sx={{ 
                           color: '#334155',
                           fontSize: '0.9375rem'
@@ -1146,7 +1146,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['Digital onboarding','Risk assessment','Regulatory compliance','Fraud detection'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#10b981' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1157,7 +1157,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['85% faster processing','40% cost reduction','99.9% accuracy'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1198,7 +1198,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['Order processing','Inventory optimization','Returns management','Customer support'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#10b981' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1209,7 +1209,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['60% faster fulfillment','30% fewer returns','25% cost savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1250,7 +1250,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['Production planning','Quality control','Supply chain visibility','Asset management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#10b981' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1261,7 +1261,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['50% faster production','35% quality improvement','45% cost reduction'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1302,7 +1302,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['Patient onboarding','Clinical workflows','HIPAA compliance','Claims processing'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#10b981' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1313,7 +1313,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['70% faster onboarding','90% compliance rate','50% error reduction'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1354,7 +1354,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['Student enrollment','Course management','Certification tracking','Alumni management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#10b981' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1365,7 +1365,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['80% faster enrollment','60% admin time saved','95% satisfaction rate'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1406,7 +1406,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['Case management','Citizen services','Document workflows','E-signature & approvals'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#10b981' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
@@ -1417,7 +1417,7 @@ export default function Home() {
                       <Box sx={{ display: 'grid', gap: 1 }}>
                         {['45% faster service delivery','30% operational savings','Higher citizen satisfaction'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <CheckCircle sx={{ fontSize: 18, color: '#3b82f6' }} />
+                            <TaskAlt sx={{ fontSize: 18, color: '#3b82f6' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}

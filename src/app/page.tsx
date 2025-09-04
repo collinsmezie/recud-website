@@ -22,7 +22,11 @@ import {
   PrecisionManufacturing,
   HealthAndSafety,
   School,
-  Shield
+  Shield,
+  WorkspacePremium,
+  Groups,
+  Public,
+  TrendingUp
 } from '@mui/icons-material';
 import { 
   AppBar, 
@@ -1245,6 +1249,111 @@ export default function Home() {
                   </Grid>
                 </CardContent>
               </Card>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* About Section */}
+      <Box id="about" sx={{ py: 20, backgroundColor: 'white' }}>
+        <Container maxWidth="lg">
+          <Box sx={{ textAlign: 'center', mb: 8 }}>
+            <Typography variant="h1" component="h2" sx={{ 
+              fontWeight: 800, 
+              mb: 2,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '2.3rem' },
+              lineHeight: 1.1,
+              color: '#1e293b',
+              letterSpacing: '-0.02em'
+            }}>
+              About FlowCore
+            </Typography>
+            <Typography variant="h6" sx={{ 
+              color: '#64748b', 
+              mb: 4, 
+              lineHeight: 1.6,
+              fontSize: { xs: '1rem', md: '1.125rem' },
+              maxWidth: '900px',
+              mx: 'auto',
+              fontWeight: 400
+            }}>
+              We're passionate about helping businesses transform their operations through intelligent process management solutions.
+            </Typography>
+          </Box>
+
+          <Grid container spacing={6}>
+            <Grid item xs={12} md={7}>
+              <Typography variant="h4" sx={{ fontWeight: 700, color: '#111827', mb: 2 }}>
+                Our Story
+              </Typography>
+              <Typography variant="body1" sx={{ color: '#6b7280', mb: 2 }}>
+                Founded in 2019, FlowCore emerged from a simple observation: businesses were drowning in inefficient processes that stifled growth and innovation. We set out to change that by creating intelligent BPM solutions that adapt to unique business needs.
+              </Typography>
+              <Typography variant="body1" sx={{ color: '#6b7280', mb: 4 }}>
+                Today, we serve 500+ clients across 6 continents, helping them achieve remarkable efficiency gains and cost savings. Our team of 50+ BPM experts combines deep industry knowledge with cutting-edge technology to deliver transformative results.
+              </Typography>
+
+              <Typography variant="h6" sx={{ fontWeight: 700, color: '#111827', mb: 2 }}>
+                Core Values
+              </Typography>
+              <Box sx={{ display: 'grid', gap: 1.5 }}>
+                {[
+                  { dot: '#3b82f6', title: 'Innovation First', desc: 'Constantly pushing the boundaries of BPM technology' },
+                  { dot: '#8b5cf6', title: 'Client Success', desc: 'Your success is our primary measure of achievement' },
+                  { dot: '#10b981', title: 'Continuous Improvement', desc: 'Never settling for good enough, always striving for excellence' },
+                ].map((item, i) => (
+                  <Box key={i}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#111827', mb: 0.5 }}>
+                      <Box sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: item.dot }} />
+                      <Typography variant="body1" sx={{ fontWeight: 600 }}>{item.title}</Typography>
+                    </Box>
+                    <Typography variant="body2" sx={{ color: '#6b7280', ml: 3 }}>
+                      {item.desc}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} md={5}>
+              <Grid container spacing={3}>
+                <Grid item xs={12} sm={6}>
+                  <Box sx={{ p: 4, backgroundColor: '#f9fafb', borderRadius: 3, textAlign: 'center' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
+                      <WorkspacePremium sx={{ color: '#2563eb' }} />
+                    </Box>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>500+</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Happy Clients</Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Box sx={{ p: 4, backgroundColor: '#f9fafb', borderRadius: 3, textAlign: 'center' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#ede9fe', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
+                      <Groups sx={{ color: '#8b5cf6' }} />
+                    </Box>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>50+</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Expert Team</Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Box sx={{ p: 4, backgroundColor: '#f9fafb', borderRadius: 3, textAlign: 'center' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dcfce7', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
+                      <Public sx={{ color: '#10b981' }} />
+                    </Box>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>15+</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Countries</Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Box sx={{ p: 4, backgroundColor: '#f9fafb', borderRadius: 3, textAlign: 'center' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#ffedd5', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
+                      <TrendingUp sx={{ color: '#f97316' }} />
+                    </Box>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>200%</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Avg. ROI</Typography>
+                  </Box>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Container>

@@ -1473,7 +1473,7 @@ export default function Home() {
           <Grid container spacing={6} alignItems="stretch">
             <Grid item xs={12} md={7}>
               <Typography variant="overline" sx={{ color: '#64748b', letterSpacing: '0.08em', fontWeight: 700 }}>
-                ABOUT FLOWCORE
+                ABOUT RECUD
               </Typography>
               <Typography variant="h1" component="h2" sx={{ 
                 fontWeight: 800, 
@@ -1486,7 +1486,7 @@ export default function Home() {
                 Pioneering the Future of Business Process Management
               </Typography>
               <Typography variant="body1" sx={{ color: '#6b7280', mb: 2, maxWidth: 720, fontSize: { xs: '0.95rem', md: '1rem' } }}>
-                Founded in 2015, FlowCore has emerged as a leading force in business process management. We specialize in designing and 
+                Founded in 2015, Recud has emerged as a leading force in business process management. We specialize in designing and 
                 developing sophisticated BPM software solutions that help organizations across various industries streamline their operations, 
                 reduce costs, and achieve sustainable growth.
               </Typography>
@@ -1624,7 +1624,7 @@ export default function Home() {
               fontFamily: 'Inter, system-ui, sans-serif'
             }}>
               Ready to transform your business processes? Get in touch with our experts for a
-              personalized consultation and discover how FlowCore can accelerate your growth.
+              personalized consultation and discover how Recud can accelerate your growth.
             </Typography>
           </Box>
 
@@ -1640,9 +1640,9 @@ export default function Home() {
                   Get In Touch
                 </Typography>
                 {[
-                  { icon: <Mail sx={{ color: '#2563eb' }} />, title: 'Email Us', desc: 'hello@flowcore.com', sub: 'We respond within 24 hours' },
-                  { icon: <Phone sx={{ color: '#2563eb' }} />, title: 'Call Us', desc: '+1 (555) 123-4567', sub: 'Mon-Fri 9AM-6PM EST' },
-                  { icon: <LocationOn sx={{ color: '#2563eb' }} />, title: 'Visit Us', desc: 'San Francisco, CA', sub: 'Schedule a consultation' },
+                  { icon: <Mail sx={{ color: '#2563eb' }} />, title: 'Email Us', desc: 'hello@recud.com', sub: 'We respond within 24 hours' },
+                  { icon: <Phone sx={{ color: '#2563eb' }} />, title: 'Call Us', desc: '+234 813 555 5555', sub: 'Mon-Fri 9AM-6PM WAT' },
+                  { icon: <LocationOn sx={{ color: '#2563eb' }} />, title: 'Visit Us', desc: 'Lagos, Nigeria', sub: 'Schedule a consultation' },
                   { icon: <HeadsetMic sx={{ color: '#2563eb' }} />, title: 'Support', desc: '24/7 Technical Support', sub: 'For all our clients' }
                 ].map((item, i) => (
                   <Box key={i} sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, alignItems: 'start', p: 2.25, borderRadius: 2, backgroundColor: 'white', border: '1px solid #e5e7eb' }}>
@@ -1678,7 +1678,7 @@ export default function Home() {
                     Global Offices
                   </Typography>
                   <Box sx={{ display: 'grid', gap: 1.25 }}>
-                    {['San Francisco, CA (HQ)', 'New York, NY', 'London, UK', 'Singapore'].map((city, i) => (
+                    {['Lagos, Nigeria (HQ)', 'Port Harcourt', 'Delta State'].map((city, i) => (
                       <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.25, color: '#334155' }}>
                         <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
                         <Typography variant="body2" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>{city}</Typography>
@@ -1733,7 +1733,7 @@ export default function Home() {
                     <TextField fullWidth label="Message" multiline rows={5} placeholder="Tell us about your business process challenges and goals..." />
                   </Grid>
                 </Grid>
-                <FormControlLabel sx={{ mt: 1 }} control={<Checkbox />} label={"I agree to receive updates and newsletters from FlowCore. I can unsubscribe at any time."} />
+                <FormControlLabel sx={{ mt: 1 }} control={<Checkbox />} label={"I agree to receive updates and newsletters from Recud. I can unsubscribe at any time."} />
 
                 <Button 
                   variant="contained" 
@@ -1821,7 +1821,7 @@ export default function Home() {
           </Grid>
           <Box sx={{ borderTop: '1px solid #374151', mt: 8, pt: 8, textAlign: 'center' }}>
             <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-              &copy; 2024 RECUD. All rights reserved.
+              &copy; 2025 RECUD. All rights reserved.
             </Typography>
           </Box>
         </Container>

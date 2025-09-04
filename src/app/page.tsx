@@ -1545,81 +1545,6 @@ export default function Home() {
         </Container>
       </Box>
 
-      {/* Team Section */}
-      <Box id="team" sx={{ py: 12, backgroundColor: 'white' }}>
-        <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 10 }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 4 }}>
-              Meet Our Expert Team
-            </Typography>
-            <Typography variant="h6" sx={{ color: '#4b5563', maxWidth: '600px', mx: 'auto' }}>
-              Our team brings together decades of experience in enterprise software, 
-              process optimization, and user experience design.
-            </Typography>
-          </Box>
-          
-          <Grid container spacing={4}>
-            {team.map((member, index) => (
-              <Grid item xs={12} sm={6} lg={3} key={index}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <Box sx={{ 
-                    width: 96, 
-                    height: 96, 
-                    backgroundColor: 'primary.50', 
-                    borderRadius: '50%', 
-                    mx: 'auto', 
-                    mb: 4,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <People sx={{ fontSize: 48, color: 'primary.main' }} />
-                  </Box>
-                  <Typography variant="h5" sx={{ fontWeight: 'semibold', mb: 1 }}>
-                    {member.name}
-                  </Typography>
-                  <Typography variant="h6" sx={{ color: 'primary.main', fontWeight: 'medium', mb: 1 }}>
-                    {member.role}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {member.expertise}
-                  </Typography>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Box>
-
-      {/* CTA Section */}
-      <Box sx={{ py: 20, backgroundColor: 'primary.main' }}>
-        <Container maxWidth="md">
-          <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 0, color: 'white' }}>
-              Ready to Transform Your Business?
-            </Typography>
-            <Typography variant="h6" sx={{ color: 'primary.100', mb: 4 }}>
-              See how RECUD can streamline your operations and drive growth. 
-              Request a personalized demo today.
-            </Typography>
-            <Button 
-              variant="contained" 
-              sx={{ 
-                backgroundColor: 'white', 
-                color: 'primary.main',
-                px: 4,
-                py: 1.5,
-                fontSize: '1.125rem',
-                borderRadius: 2,
-                '&:hover': { backgroundColor: '#f3f4f6' }
-              }}
-            >
-              Request Demo
-            </Button>
-          </Box>
-        </Container>
-      </Box>
-
       {/* Contact Section */}
       <Box id="contact" sx={{ py: 14, backgroundColor: '#f8fafc' }}>
         <Container maxWidth="lg">
@@ -1636,6 +1561,10 @@ export default function Home() {
           <Grid container spacing={4}>
             <Grid item xs={12} md={5}>
               <Box sx={{ display: 'grid', gap: 2.5 }}>
+                {/* Left column heading to match design */}
+                <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a' }}>
+                  Get In Touch
+                </Typography>
                 {[
                   { icon: <Mail sx={{ color: '#2563eb' }} />, title: 'Email Us', desc: 'hello@flowcore.com', sub: 'We respond within 24 hours' },
                   { icon: <Phone sx={{ color: '#2563eb' }} />, title: 'Call Us', desc: '+1 (555) 123-4567', sub: 'Mon-Fri 9AM-6PM EST' },
@@ -1688,9 +1617,19 @@ export default function Home() {
                   <Grid item xs={12} md={6}>
                     <FormControl fullWidth>
                       <InputLabel id="industry-label">Industry</InputLabel>
-                      <Select labelId="industry-label" label="Industry" defaultValue="">
-                        {['Select Industry','Financial Services','Healthcare','Manufacturing','Retail','Government','Education'].map((opt) => (
-                          <MenuItem key={opt} value={opt === 'Select Industry' ? '' : opt}>{opt}</MenuItem>
+                      {/* Controlled Select to show placeholder like the design */}
+                      <Select
+                        labelId="industry-label"
+                        label="Industry"
+                        displayEmpty
+                        defaultValue=""
+                        renderValue={(value: unknown) => {
+                          const v = (value as string) || '';
+                          return v !== '' ? v : 'Select Industry';
+                        }}
+                      >
+                        {['', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Government', 'Education'].map((opt, idx) => (
+                          <MenuItem key={idx} value={opt}>{opt === '' ? 'Select Industry' : opt}</MenuItem>
                         ))}
                       </Select>
                     </FormControl>
@@ -1701,11 +1640,14 @@ export default function Home() {
                 </Grid>
                 <FormControlLabel sx={{ mt: 1 }} control={<Checkbox />} label={"I agree to receive updates and newsletters from FlowCore. I can unsubscribe at any time."} />
 
-                <Button variant="contained" fullWidth sx={{ mt: 2, py: 1.5, backgroundColor: '#2563eb', borderRadius: 2, textTransform: 'none', fontWeight: 700 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1 }}>
-                    <Send sx={{ fontSize: 18 }} />
-                    Send Message
-                  </Box>
+                <Button 
+                  variant="contained" 
+                  fullWidth 
+                  startIcon={<Box sx={{ width: 22, height: 22, borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.15)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><Mail sx={{ fontSize: 16 }} /></Box>}
+                  endIcon={<Send sx={{ fontSize: 18 }} />}
+                  sx={{ mt: 2, py: 1.5, backgroundColor: '#2563eb', borderRadius: 2, textTransform: 'none', fontWeight: 700, '&:hover': { backgroundColor: '#1d4ed8' } }}
+                >
+                  Send Message
                 </Button>
               </Card>
             </Grid>

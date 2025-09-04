@@ -1609,10 +1609,20 @@ export default function Home() {
       <Box id="contact" sx={{ py: 14, backgroundColor: '#f8fafc' }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 800, mb: 1, color: '#0f172a' }}>
+            <Typography variant="h3" component="h2" sx={{ 
+              fontWeight: 800, 
+              mb: 1, 
+              color: '#0f172a',
+              fontFamily: 'Inter, system-ui, sans-serif'
+            }}>
               Let's Build Your Success Together
             </Typography>
-            <Typography variant="h6" sx={{ color: '#475569', maxWidth: '780px', mx: 'auto' }}>
+            <Typography variant="h6" sx={{ 
+              color: '#475569', 
+              maxWidth: '780px', 
+              mx: 'auto',
+              fontFamily: 'Inter, system-ui, sans-serif'
+            }}>
               Ready to transform your business processes? Get in touch with our experts for a
               personalized consultation and discover how FlowCore can accelerate your growth.
             </Typography>
@@ -1622,7 +1632,11 @@ export default function Home() {
             <Grid item xs={12} md={5}>
               <Box sx={{ display: 'grid', gap: 2.5 }}>
                 {/* Left column heading to match design */}
-                <Typography variant="h6" sx={{ fontWeight: 800, color: '#0f172a' }}>
+                <Typography variant="h6" sx={{ 
+                  fontWeight: 800, 
+                  color: '#0f172a',
+                  fontFamily: 'Inter, system-ui, sans-serif'
+                }}>
                   Get In Touch
                 </Typography>
                 {[
@@ -1636,22 +1650,38 @@ export default function Home() {
                       {item.icon}
                     </Box>
                     <Box>
-                      <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#0f172a' }}>{item.title}</Typography>
-                      <Typography variant="body2" sx={{ color: '#1f2c3b', fontWeight: 600 }}>{item.desc}</Typography>
-                      <Typography variant="body2" sx={{ color: '#6b7280' }}>{item.sub}</Typography>
+                      <Typography variant="subtitle1" sx={{ 
+                        fontWeight: 700, 
+                        color: '#0f172a',
+                        fontFamily: 'Inter, system-ui, sans-serif'
+                      }}>{item.title}</Typography>
+                      <Typography variant="body2" sx={{ 
+                        color: '#1f2c3b', 
+                        fontWeight: 600,
+                        fontFamily: 'Inter, system-ui, sans-serif'
+                      }}>{item.desc}</Typography>
+                      <Typography variant="body2" sx={{ 
+                        color: '#6b7280',
+                        fontFamily: 'Inter, system-ui, sans-serif'
+                      }}>{item.sub}</Typography>
                     </Box>
                   </Box>
                 ))}
 
                 <Box sx={{ mt: 1, p: 3, borderRadius: 2.5, backgroundColor: 'white', border: '1px solid #e5e7eb' }}>
-                  <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#0f172a', mb: 1.5 }}>
+                  <Typography variant="subtitle1" sx={{ 
+                    fontWeight: 800, 
+                    color: '#0f172a', 
+                    mb: 1.5,
+                    fontFamily: 'Inter, system-ui, sans-serif'
+                  }}>
                     Global Offices
                   </Typography>
                   <Box sx={{ display: 'grid', gap: 1.25 }}>
                     {['San Francisco, CA (HQ)', 'New York, NY', 'London, UK', 'Singapore'].map((city, i) => (
                       <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.25, color: '#334155' }}>
                         <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
-                        <Typography variant="body2">{city}</Typography>
+                        <Typography variant="body2" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>{city}</Typography>
                       </Box>
                     ))}
                   </Box>
@@ -1661,7 +1691,12 @@ export default function Home() {
 
             <Grid item xs={12} md={7}>
               <Card sx={{ p: { xs: 3, md: 4 }, borderRadius: 3, border: '1px solid #e5e7eb', boxShadow: '0 8px 20px rgba(0,0,0,0.06)' }}>
-                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2, color: '#0f172a' }}>
+                <Typography variant="h6" sx={{ 
+                  fontWeight: 800, 
+                  mb: 2, 
+                  color: '#0f172a',
+                  fontFamily: 'Inter, system-ui, sans-serif'
+                }}>
                   Request a Consultation
                 </Typography>
                 <Grid container spacing={2}>
@@ -1705,7 +1740,16 @@ export default function Home() {
                   fullWidth 
                   startIcon={<Box sx={{ width: 22, height: 22, borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.15)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><Mail sx={{ fontSize: 16 }} /></Box>}
                   endIcon={<Send sx={{ fontSize: 18 }} />}
-                  sx={{ mt: 2, py: 1.5, backgroundColor: '#2563eb', borderRadius: 2, textTransform: 'none', fontWeight: 700, '&:hover': { backgroundColor: '#1d4ed8' } }}
+                  sx={{ 
+                    mt: 2, 
+                    py: 1.5, 
+                    backgroundColor: '#2563eb', 
+                    borderRadius: 2, 
+                    textTransform: 'none', 
+                    fontWeight: 700, 
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                    '&:hover': { backgroundColor: '#1d4ed8' } 
+                  }}
                 >
                   Send Message
                 </Button>
@@ -1713,54 +1757,70 @@ export default function Home() {
             </Grid>
           </Grid>
         </Container>
-      </Box>{/* Footer */}
+      </Box>
+      
+      {/* Footer */}
       <Box sx={{ backgroundColor: '#111827', color: 'white', py: 12 }}>
         <Container maxWidth="lg">
           <Grid container spacing={4}>
             <Grid item xs={12} md={3}>
-              <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'primary.400', mb: 2 }}>
+              <Typography variant="h4" sx={{ 
+                fontWeight: 'bold', 
+                color: 'primary.400', 
+                mb: 2,
+                fontFamily: 'Inter, system-ui, sans-serif'
+              }}>
                 RECUD
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
                 Transforming business operations through intelligent process management solutions.
               </Typography>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Typography variant="h6" sx={{ mb: 2 }}>
+              <Typography variant="h6" sx={{ 
+                mb: 2,
+                fontFamily: 'Inter, system-ui, sans-serif'
+              }}>
                 Services
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Typography variant="body2" color="text.secondary">Process Automation</Typography>
-                <Typography variant="body2" color="text.secondary">Workflow Management</Typography>
-                <Typography variant="body2" color="text.secondary">Analytics & Insights</Typography>
-                <Typography variant="body2" color="text.secondary">Cloud Solutions</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Process Automation</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Workflow Management</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Analytics & Insights</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Cloud Solutions</Typography>
               </Box>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Typography variant="h6" sx={{ mb: 2 }}>
+              <Typography variant="h6" sx={{ 
+                mb: 2,
+                fontFamily: 'Inter, system-ui, sans-serif'
+              }}>
                 Company
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Typography variant="body2" color="text.secondary">About Us</Typography>
-                <Typography variant="body2" color="text.secondary">Team</Typography>
-                <Typography variant="body2" color="text.secondary">Careers</Typography>
-                <Typography variant="body2" color="text.secondary">Contact</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>About Us</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Team</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Careers</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Contact</Typography>
               </Box>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Typography variant="h6" sx={{ mb: 2 }}>
+              <Typography variant="h6" sx={{ 
+                mb: 2,
+                fontFamily: 'Inter, system-ui, sans-serif'
+              }}>
                 Connect
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Typography variant="body2" color="text.secondary">LinkedIn</Typography>
-                <Typography variant="body2" color="text.secondary">Twitter</Typography>
-                <Typography variant="body2" color="text.secondary">Blog</Typography>
-                <Typography variant="body2" color="text.secondary">Newsletter</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>LinkedIn</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Twitter</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Blog</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Newsletter</Typography>
               </Box>
             </Grid>
           </Grid>
           <Box sx={{ borderTop: '1px solid #374151', mt: 8, pt: 8, textAlign: 'center' }}>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
               &copy; 2024 RECUD. All rights reserved.
             </Typography>
           </Box>

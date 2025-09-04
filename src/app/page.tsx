@@ -985,15 +985,17 @@ export default function Home() {
             <Grid item xs={12} md={6}>
               <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
                 <CardContent sx={{ p: 0 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1.5 }}>
+                  <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 3, alignItems: 'start' }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <AccountBalance sx={{ color: '#3b82f6' }} />
                     </Box>
-                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827' }}>Financial Services</Typography>
+                    <Box>
+                      <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827', mb: 0.5 }}>Financial Services</Typography>
+                      <Typography variant="body1" sx={{ color: '#6b7280' }}>
+                        Transform banking operations, loan processing, and compliance management with intelligent BPM solutions.
+                      </Typography>
+                    </Box>
                   </Box>
-                  <Typography variant="body1" sx={{ color: '#6b7280', mb: 3 }}>
-                    Transform banking operations, loan processing, and compliance management with intelligent BPM solutions.
-                  </Typography>
 
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
@@ -1027,15 +1029,17 @@ export default function Home() {
             <Grid item xs={12} md={6}>
               <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
                 <CardContent sx={{ p: 0 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1.5 }}>
+                  <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 3, alignItems: 'start' }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <ShoppingCart sx={{ color: '#3b82f6' }} />
                     </Box>
-                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827' }}>E-commerce & Retail</Typography>
+                    <Box>
+                      <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827', mb: 0.5 }}>E-commerce & Retail</Typography>
+                      <Typography variant="body1" sx={{ color: '#6b7280' }}>
+                        Streamline order fulfillment, inventory management, and customer service processes for online and offline retail.
+                      </Typography>
+                    </Box>
                   </Box>
-                  <Typography variant="body1" sx={{ color: '#6b7280', mb: 3 }}>
-                    Streamline order fulfillment, inventory management, and customer service processes for online and offline retail.
-                  </Typography>
 
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
@@ -1069,15 +1073,17 @@ export default function Home() {
             <Grid item xs={12} md={6}>
               <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
                 <CardContent sx={{ p: 0 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1.5 }}>
+                  <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 3, alignItems: 'start' }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <PrecisionManufacturing sx={{ color: '#3b82f6' }} />
                     </Box>
-                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827' }}>Manufacturing & Logistics</Typography>
+                    <Box>
+                      <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827', mb: 0.5 }}>Manufacturing & Logistics</Typography>
+                      <Typography variant="body1" sx={{ color: '#6b7280' }}>
+                        Optimize supply chain operations, production planning, and quality control processes for manufacturing excellence.
+                      </Typography>
+                    </Box>
                   </Box>
-                  <Typography variant="body1" sx={{ color: '#6b7280', mb: 3 }}>
-                    Optimize supply chain operations, production planning, and quality control processes for manufacturing excellence.
-                  </Typography>
 
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
@@ -1111,15 +1117,17 @@ export default function Home() {
             <Grid item xs={12} md={6}>
               <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
                 <CardContent sx={{ p: 0 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1.5 }}>
+                  <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, mb: 3, alignItems: 'start' }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <HealthAndSafety sx={{ color: '#3b82f6' }} />
                     </Box>
-                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827' }}>Healthcare & Life Sciences</Typography>
+                    <Box>
+                      <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827', mb: 0.5 }}>Healthcare & Life Sciences</Typography>
+                      <Typography variant="body1" sx={{ color: '#6b7280' }}>
+                        Enhance patient care, clinical workflows, and regulatory compliance in healthcare organizations.
+                      </Typography>
+                    </Box>
                   </Box>
-                  <Typography variant="body1" sx={{ color: '#6b7280', mb: 3 }}>
-                    Enhance patient care, clinical workflows, and regulatory compliance in healthcare organizations.
-                  </Typography>
 
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>

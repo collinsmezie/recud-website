@@ -518,10 +518,10 @@ export default function Home() {
                 gap: 1,
                 backgroundColor: '#dbeafe',
                 color: '#1e40af',
-                px: 3,
-                py: 1,
+                px: 2,
+                py: 0.8,
                 borderRadius: '50px',
-                mb: 0,
+                mb: 2,
                 fontSize: '0.875rem',
                 fontWeight: 500,
                 border: '1px solid #bfdbfe'

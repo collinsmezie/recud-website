@@ -59,7 +59,19 @@ import {
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const services = [
     {
       icon: <Shield sx={{ fontSize: 24, color: '#2563eb' }} />,
@@ -225,9 +237,10 @@ export default function Home() {
     <div>
       {/* Navigation */}
       <AppBar position="fixed" elevation={0} sx={{ 
-        background: 'transparent',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        background: isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
+        backdropFilter: isScrolled ? 'blur(20px)' : 'blur(10px)',
+        borderBottom: isScrolled ? '1px solid rgba(0, 0, 0, 0.1)' : '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: isScrolled ? '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)' : 'none',
         transition: 'all 0.3s ease'
       }}>
         <Toolbar sx={{ 
@@ -270,7 +283,7 @@ export default function Home() {
               color="inherit" 
               href="#services" 
               sx={{ 
-                color: '#374151', 
+                color: isScrolled ? '#374151' : '#374151', 
                 fontWeight: 500,
                 fontSize: '0.95rem',
                 textTransform: 'none',
@@ -290,7 +303,7 @@ export default function Home() {
               color="inherit" 
               href="#industries" 
               sx={{ 
-                color: '#374151', 
+                color: isScrolled ? '#374151' : '#374151', 
                 fontWeight: 500,
                 fontSize: '0.95rem',
                 textTransform: 'none',
@@ -310,7 +323,7 @@ export default function Home() {
               color="inherit" 
               href="#team" 
               sx={{ 
-                color: '#374151', 
+                color: isScrolled ? '#374151' : '#374151', 
                 fontWeight: 500,
                 fontSize: '0.95rem',
                 textTransform: 'none',
@@ -330,7 +343,7 @@ export default function Home() {
               color="inherit" 
               href="#contact" 
               sx={{ 
-                color: '#374151', 
+                color: isScrolled ? '#374151' : '#374151', 
                 fontWeight: 500,
                 fontSize: '0.95rem',
                 textTransform: 'none',
@@ -357,7 +370,7 @@ export default function Home() {
             <Button 
               variant="outlined"
               sx={{ 
-                borderColor: 'rgba(55, 65, 81, 0.3)',
+                borderColor: isScrolled ? '#d1d5db' : 'rgba(55, 65, 81, 0.3)',
                 color: '#374151',
                 fontWeight: 500,
                 fontSize: '0.9rem',
@@ -367,11 +380,11 @@ export default function Home() {
                 borderRadius: 2,
                 borderWidth: 1.5,
                 fontFamily: 'Inter, system-ui, sans-serif',
-                backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
+                backgroundColor: isScrolled ? 'transparent' : 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: isScrolled ? 'none' : 'blur(10px)',
                 '&:hover': { 
-                  borderColor: 'rgba(55, 65, 81, 0.5)',
-                  backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                  borderColor: isScrolled ? '#9ca3af' : 'rgba(55, 65, 81, 0.5)',
+                  backgroundColor: isScrolled ? '#f9fafb' : 'rgba(255, 255, 255, 0.9)',
                   borderWidth: 1.5
                 }
               }}
@@ -389,11 +402,15 @@ export default function Home() {
                 px: 3,
                 py: 1.2,
                 borderRadius: 2,
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                boxShadow: isScrolled 
+                  ? '0 1px 2px 0 rgba(0, 0, 0, 0.05)' 
+                  : '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
                 fontFamily: 'Inter, system-ui, sans-serif',
                 '&:hover': { 
                   backgroundColor: '#2563eb',
-                  boxShadow: '0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                  boxShadow: isScrolled 
+                    ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                    : '0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 4px 6px -1px rgba(0, 0, 0, 0.1)'
                 }
               }}
             >

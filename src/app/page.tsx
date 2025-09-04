@@ -1447,18 +1447,18 @@ export default function Home() {
           </Grid>
 
           {/* Industries CTA (inside section) */}
-          <Box sx={{ mt: 6, p: { xs: 3, md: 5 }, borderRadius: 3, background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', textAlign: 'center' }}>
-            <Typography variant="h4" sx={{ fontWeight: 800, mb: 1 }}>
+          <Box sx={{ mt: 6, p: { xs: 3, md: 5 }, borderRadius: 3, background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', textAlign: 'center', maxWidth: '100%', mx: 'auto', width: '100%', border: '2px solid #ef4444' }}>
+            <Typography variant="h4" sx={{ fontWeight: 800, mb: 1, fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem', lg: '2.25rem' } }}>
               Expertise Across All Major Industries
             </Typography>
-            <Typography sx={{ opacity: 0.95, mb: 3, maxWidth: 900, mx: 'auto' }}>
+            <Typography sx={{ opacity: 0.95, mb: 3, maxWidth: { xs: '100%', sm: '90%', md: '80%', lg: '70%' }, mx: 'auto', fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem' } }}>
               With deep domain knowledge and proven methodologies, we help organizations in every sector achieve operational excellence through tailored BPM solutions.
             </Typography>
-            <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap', opacity: 0.95 }}>
+            <Box sx={{ display: 'flex', gap: { xs: 2, sm: 3, md: 4 }, justifyContent: 'center', flexWrap: 'wrap', opacity: 0.95, flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center' }}>
               {['50+ Industries Served', '1000+ Successful Implementations', '99.9% Client Satisfaction'].map((text, i) => (
-                <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
-                  <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.9)' }} />
-                  <Typography sx={{ fontWeight: 600 }}>{text}</Typography>
+                <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.25, minWidth: { xs: 'auto', sm: '200px' }, justifyContent: { xs: 'center', sm: 'flex-start' } }}>
+                  <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.9)', flexShrink: 0 }} />
+                  <Typography sx={{ fontWeight: 600, fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem' } }}>{text}</Typography>
                 </Box>
               ))}
             </Box>
@@ -1769,7 +1769,7 @@ export default function Home() {
           background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)',
           color: 'white',
           textAlign: 'center',
-          maxWidth: { xs: '92%', sm: '93%', md: '83%', lg: '73%', xl: '62%' },
+          maxWidth: '100%',
           mx: 'auto',
           width: '100%'
         }}>

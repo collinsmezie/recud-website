@@ -28,7 +28,8 @@ import {
   Groups,
   Public,
   TrendingUp,
-  CheckCircle
+  CheckCircle,
+  AccessTime
 } from '@mui/icons-material';
 import { 
   AppBar, 
@@ -1425,59 +1426,46 @@ export default function Home() {
       {/* About Section */}
       <Box id="about" sx={{ py: 12, backgroundColor: 'white' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 6 }}>
-            <Typography variant="h1" component="h2" sx={{ 
-              fontWeight: 800, 
-              mb: 2,
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '2.3rem' },
-              lineHeight: 1.1,
-              color: '#1e293b',
-              letterSpacing: '-0.02em'
-            }}>
-              About FlowCore
-            </Typography>
-            <Typography variant="h6" sx={{ 
-              color: '#64748b', 
-              mb: 4, 
-              lineHeight: 1.6,
-              fontSize: { xs: '1rem', md: '1.125rem' },
-              maxWidth: '900px',
-              mx: 'auto',
-              fontWeight: 400
-            }}>
-              We're passionate about helping businesses transform their operations through intelligent process management solutions.
-            </Typography>
-          </Box>
-
-          <Grid container spacing={6}>
+          <Grid container spacing={6} alignItems="stretch">
             <Grid item xs={12} md={7}>
-              <Typography variant="h4" sx={{ fontWeight: 700, color: '#111827', mb: 2 }}>
-                Our Story
+              <Typography variant="overline" sx={{ color: '#64748b', letterSpacing: '0.08em', fontWeight: 700 }}>
+                ABOUT FLOWCORE
+              </Typography>
+              <Typography variant="h1" component="h2" sx={{ 
+                fontWeight: 800, 
+                mb: 2,
+                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '2.4rem' },
+                lineHeight: 1.1,
+                color: '#1e293b',
+                letterSpacing: '-0.02em'
+              }}>
+                Pioneering the Future of Business Process Management
               </Typography>
               <Typography variant="body1" sx={{ color: '#6b7280', mb: 2 }}>
-                Founded in 2019, FlowCore emerged from a simple observation: businesses were drowning in inefficient processes that stifled growth and innovation. We set out to change that by creating intelligent BPM solutions that adapt to unique business needs.
+                Founded in 2015, FlowCore has emerged as a leading force in business process management. We specialize in designing and 
+                developing sophisticated BPM software solutions that help organizations across various industries streamline their operations, 
+                reduce costs, and achieve sustainable growth.
               </Typography>
               <Typography variant="body1" sx={{ color: '#6b7280', mb: 4 }}>
-                Today, we serve 500+ clients across 6 continents, helping them achieve remarkable efficiency gains and cost savings. Our team of 50+ BPM experts combines deep industry knowledge with cutting-edge technology to deliver transformative results.
+                Our team of experts combines deep industry knowledge with cutting-edge technology to deliver tailored solutions that address the 
+                unique challenges of each client. We believe in building long-term partnerships that drive continuous innovation and operational excellence.
               </Typography>
 
-              <Typography variant="h6" sx={{ fontWeight: 700, color: '#111827', mb: 2 }}>
-                Core Values
-              </Typography>
-              <Box sx={{ display: 'grid', gap: 1.5 }}>
+              <Box sx={{ display: 'grid', gap: 2 }}>
                 {[
-                  { dot: '#3b82f6', title: 'Innovation First', desc: 'Constantly pushing the boundaries of BPM technology' },
-                  { dot: '#8b5cf6', title: 'Client Success', desc: 'Your success is our primary measure of achievement' },
-                  { dot: '#10b981', title: 'Continuous Improvement', desc: 'Never settling for good enough, always striving for excellence' },
+                  { icon: <AutoAwesome sx={{ color: '#2563eb' }} />, title: 'Innovation First', desc: 'We continuously push the boundaries of BPM technology to deliver cutting-edge solutions.' },
+                  { icon: <Groups sx={{ color: '#2563eb' }} />, title: 'Client Success', desc: 'Your success is our success. We build long-term partnerships focused on your growth.' },
+                  { icon: <WorkspacePremium sx={{ color: '#2563eb' }} />, title: 'Quality Excellence', desc: 'Every solution is crafted with meticulous attention to detail and highest quality standards.' },
+                  { icon: <Public sx={{ color: '#2563eb' }} />, title: 'Global Impact', desc: 'We help organizations worldwide achieve operational excellence and sustainable growth.' }
                 ].map((item, i) => (
-                  <Box key={i}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#111827', mb: 0.5 }}>
-                      <Box sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: item.dot }} />
-                      <Typography variant="body1" sx={{ fontWeight: 600 }}>{item.title}</Typography>
+                  <Box key={i} sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, alignItems: 'start' }}>
+                    <Box sx={{ width: 40, height: 40, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
+                      {item.icon}
                     </Box>
-                    <Typography variant="body2" sx={{ color: '#6b7280', ml: 3 }}>
-                      {item.desc}
-                    </Typography>
+                    <Box>
+                      <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#111827', mb: 0.25 }}>{item.title}</Typography>
+                      <Typography variant="body2" sx={{ color: '#6b7280' }}>{item.desc}</Typography>
+                    </Box>
                   </Box>
                 ))}
               </Box>
@@ -1486,39 +1474,61 @@ export default function Home() {
             <Grid item xs={12} md={5}>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 4, backgroundColor: '#f9fafb', borderRadius: 3, textAlign: 'center' }}>
-                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
-                      <WorkspacePremium sx={{ color: '#2563eb' }} />
+                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f8fbff 0%, #f1f5ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
+                      <People sx={{ color: '#2563eb' }} />
                     </Box>
                     <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>500+</Typography>
-                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Happy Clients</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Enterprise Clients</Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 4, backgroundColor: '#f9fafb', borderRadius: 3, textAlign: 'center' }}>
-                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#ede9fe', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
-                      <Groups sx={{ color: '#8b5cf6' }} />
+                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f8fbff 0%, #f1f5ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
+                      <Language sx={{ color: '#2563eb' }} />
                     </Box>
                     <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>50+</Typography>
-                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Expert Team</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Countries Served</Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 4, backgroundColor: '#f9fafb', borderRadius: 3, textAlign: 'center' }}>
-                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dcfce7', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
-                      <Public sx={{ color: '#10b981' }} />
+                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f8fbff 0%, #f1f5ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
+                      <AccessTime sx={{ color: '#2563eb' }} />
                     </Box>
-                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>15+</Typography>
-                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Countries</Typography>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>99.9%</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Uptime SLA</Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 4, backgroundColor: '#f9fafb', borderRadius: 3, textAlign: 'center' }}>
-                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#ffedd5', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
-                      <TrendingUp sx={{ color: '#f97316' }} />
+                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f8fbff 0%, #f1f5ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
+                      <WorkspacePremium sx={{ color: '#2563eb' }} />
                     </Box>
-                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>200%</Typography>
-                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Avg. ROI</Typography>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>25+</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Industry Awards</Typography>
+                  </Box>
+                </Grid>
+
+                <Grid item xs={12}>
+                  <Box sx={{ p: { xs: 3, md: 4 }, borderRadius: 4, background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', boxShadow: '0 20px 45px rgba(59,130,246,.25)' }}>
+                    <Typography variant="h5" sx={{ fontWeight: 800, mb: { xs: 2, md: 3 } }}>Our Journey</Typography>
+                    <Box sx={{ display: 'grid', gap: { xs: 1.5, md: 2 } }}>
+                      {[
+                        { year: '2015 - Foundation', note: 'Started with a vision to revolutionize BPM' },
+                        { year: '2018 - Global Expansion', note: 'Extended services to 25+ countries' },
+                        { year: '2021 - Innovation Leader', note: 'Recognized as top BPM solution provider' },
+                        { year: '2024 - Future Ready', note: 'Leading the AI-powered BPM revolution' }
+                      ].map((m, i) => (
+                        <Box key={i} sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 1.5, alignItems: 'start' }}>
+                          <Box sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: 'white', mt: 0.75 }} />
+                          <Box>
+                            <Typography variant="subtitle1" sx={{ fontWeight: 800, lineHeight: 1.25 }}>{m.year}</Typography>
+                            <Typography variant="body2" sx={{ opacity: 0.9 }}>{m.note}</Typography>
+                          </Box>
+                        </Box>
+                      ))}
+                    </Box>
                   </Box>
                 </Grid>
               </Grid>
@@ -1530,32 +1540,26 @@ export default function Home() {
       {/* Our Journey Section */}
       <Box id="journey" sx={{ py: 12, backgroundColor: '#ffffff' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 6 }}>
-            <Typography variant="h1" component="h2" sx={{ 
-              fontWeight: 800, 
-              mb: 2,
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '2.0rem' },
-              lineHeight: 1.1,
-              color: '#1e293b',
-              letterSpacing: '-0.02em'
-            }}>
-              Our Journey
-            </Typography>
-          </Box>
-
-          <Box sx={{ position: 'relative' }}>
-            <Box sx={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: 2, backgroundColor: '#e5e7eb', transform: 'translateX(-50%)' }} />
-
-            {([
-              { year: '2019', title: 'Founded', desc: 'Started with a vision to revolutionize business process management', side: 'left' as const },
-              { year: '2020', title: 'First 100 Clients', desc: 'Successfully helped 100+ businesses optimize their processes', side: 'right' as const },
-              { year: '2021', title: 'Global Expansion', desc: 'Extended services to 15+ countries across 4 continents', side: 'left' as const },
-              { year: '2022', title: 'AI Integration', desc: 'Launched AI-powered BPM solutions with advanced analytics', side: 'right' as const },
-              { year: '2023', title: '500+ Clients', desc: 'Reached 500+ satisfied clients with 99.9% satisfaction rate', side: 'left' as const },
-              { year: '2024', title: 'Industry Leader', desc: 'Recognized as a top BPM solution provider in multiple industries', side: 'right' as const },
-            ] as JourneyEvent[]).map((event, index) => (
-              <TimelineItem key={index} event={event} />
-            ))}
+          <Box>
+            <Box sx={{ p: { xs: 3, md: 4 }, borderRadius: 4, background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', boxShadow: '0 20px 45px rgba(59,130,246,.25)' }}>
+              <Typography variant="h5" sx={{ fontWeight: 800, mb: { xs: 2, md: 3 } }}>Our Journey</Typography>
+              <Box sx={{ display: 'grid', gap: { xs: 1.5, md: 2 } }}>
+                {[
+                  { year: '2015 - Foundation', note: 'Started with a vision to revolutionize BPM' },
+                  { year: '2018 - Global Expansion', note: 'Extended services to 25+ countries' },
+                  { year: '2021 - Innovation Leader', note: 'Recognized as top BPM solution provider' },
+                  { year: '2024 - Future Ready', note: 'Leading the AI-powered BPM revolution' }
+                ].map((m, i) => (
+                  <Box key={i} sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 1.5, alignItems: 'start' }}>
+                    <Box sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: 'white', mt: 0.75 }} />
+                    <Box>
+                      <Typography variant="subtitle1" sx={{ fontWeight: 800, lineHeight: 1.25 }}>{m.year}</Typography>
+                      <Typography variant="body2" sx={{ opacity: 0.9 }}>{m.note}</Typography>
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
           </Box>
         </Container>
       </Box>

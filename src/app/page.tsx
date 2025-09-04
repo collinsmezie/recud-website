@@ -1359,6 +1359,69 @@ export default function Home() {
         </Container>
       </Box>
 
+      {/* Our Journey Section */}
+      <Box id="journey" sx={{ py: 20, backgroundColor: '#ffffff' }}>
+        <Container maxWidth="lg">
+          <Box sx={{ textAlign: 'center', mb: 8 }}>
+            <Typography variant="h1" component="h2" sx={{ 
+              fontWeight: 800, 
+              mb: 2,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '2.0rem' },
+              lineHeight: 1.1,
+              color: '#1e293b',
+              letterSpacing: '-0.02em'
+            }}>
+              Our Journey
+            </Typography>
+          </Box>
+
+          <Box sx={{ position: 'relative' }}>
+            <Box sx={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: 2, backgroundColor: '#e5e7eb', transform: 'translateX(-50%)' }} />
+
+                         {[
+               { year: '2019', title: 'Founded', desc: 'Started with a vision to revolutionize business process management', side: 'left' },
+               { year: '2020', title: 'First 100 Clients', desc: 'Successfully helped 100+ businesses optimize their processes', side: 'right' },
+               { year: '2021', title: 'Global Expansion', desc: 'Extended services to 15+ countries across 4 continents', side: 'left' },
+               { year: '2022', title: 'AI Integration', desc: 'Launched AI-powered BPM solutions with advanced analytics', side: 'right' },
+               { year: '2023', title: '500+ Clients', desc: 'Reached 500+ satisfied clients with 99.9% satisfaction rate', side: 'left' },
+               { year: '2024', title: 'Industry Leader', desc: 'Recognized as a top BPM solution provider in multiple industries', side: 'right' },
+             ].map((event, index) => (
+              <Grid container key={index} sx={{ position: 'relative', py: { xs: 4, md: 6 } }}>
+                {event.side === 'left' ? (
+                  <>
+                    <Grid item xs={12} md={6}>
+                      <Card sx={{ mr: { md: 6 }, p: 3, borderRadius: 2, boxShadow: '0 10px 20px rgba(0,0,0,0.06)' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                          <Typography variant="subtitle1" sx={{ color: '#2563eb', fontWeight: 700 }}>{event.year}</Typography>
+                          <Typography variant="subtitle1" sx={{ color: '#111827', fontWeight: 700 }}>{event.title}</Typography>
+                        </Box>
+                        <Typography variant="body2" sx={{ color: '#6b7280' }}>{event.desc}</Typography>
+                      </Card>
+                    </Grid>
+                    <Grid item md={6} sx={{ display: { xs: 'none', md: 'block' } }} />
+                  </>
+                ) : (
+                  <>
+                    <Grid item md={6} sx={{ display: { xs: 'none', md: 'block' } }} />
+                    <Grid item xs={12} md={6}>
+                      <Card sx={{ ml: { md: 6 }, p: 3, borderRadius: 2, boxShadow: '0 10px 20px rgba(0,0,0,0.06)' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                          <Typography variant="subtitle1" sx={{ color: '#2563eb', fontWeight: 700 }}>{event.year}</Typography>
+                          <Typography variant="subtitle1" sx={{ color: '#111827', fontWeight: 700 }}>{event.title}</Typography>
+                        </Box>
+                        <Typography variant="body2" sx={{ color: '#6b7280' }}>{event.desc}</Typography>
+                      </Card>
+                    </Grid>
+                  </>
+                )}
+
+                <Box sx={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', width: 12, height: 12, backgroundColor: '#2563eb', borderRadius: '50%', boxShadow: '0 0 0 4px #e0ebff' }} />
+              </Grid>
+            ))}
+          </Box>
+        </Container>
+      </Box>
+
       {/* Team Section */}
       <Box id="team" sx={{ py: 20, backgroundColor: 'white' }}>
         <Container maxWidth="lg">

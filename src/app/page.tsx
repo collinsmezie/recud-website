@@ -1449,17 +1449,17 @@ export default function Home() {
               }}>
                 Pioneering the Future of Business Process Management
               </Typography>
-              <Typography variant="body1" sx={{ color: '#6b7280', mb: 2 }}>
+              <Typography variant="body1" sx={{ color: '#6b7280', mb: 2, maxWidth: 720 }}>
                 Founded in 2015, FlowCore has emerged as a leading force in business process management. We specialize in designing and 
                 developing sophisticated BPM software solutions that help organizations across various industries streamline their operations, 
                 reduce costs, and achieve sustainable growth.
               </Typography>
-              <Typography variant="body1" sx={{ color: '#6b7280', mb: 4 }}>
+              <Typography variant="body1" sx={{ color: '#6b7280', mb: 4, maxWidth: 720 }}>
                 Our team of experts combines deep industry knowledge with cutting-edge technology to deliver tailored solutions that address the 
                 unique challenges of each client. We believe in building long-term partnerships that drive continuous innovation and operational excellence.
               </Typography>
 
-              <Box sx={{ display: 'grid', gap: 2 }}>
+              <Box sx={{ display: 'grid', gap: 2.25 }}>
                 {[
                   { icon: <AutoAwesome sx={{ color: '#2563eb' }} />, title: 'Innovation First', desc: 'We continuously push the boundaries of BPM technology to deliver cutting-edge solutions.' },
                   { icon: <Groups sx={{ color: '#2563eb' }} />, title: 'Client Success', desc: 'Your success is our success. We build long-term partnerships focused on your growth.' },
@@ -1467,7 +1467,16 @@ export default function Home() {
                   { icon: <Public sx={{ color: '#2563eb' }} />, title: 'Global Impact', desc: 'We help organizations worldwide achieve operational excellence and sustainable growth.' }
                 ].map((item, i) => (
                   <Box key={i} sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, alignItems: 'start' }}>
-                    <Box sx={{ width: 40, height: 40, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
+                    <Box sx={{ 
+                      width: 40, 
+                      height: 40, 
+                      borderRadius: '50%', 
+                      background: 'radial-gradient(circle at 30% 30%, #eff6ff 0%, #eaf2ff 60%, #e5edff 100%)', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      boxShadow: 'inset 0 0 0 1px #dbeafe'
+                    }}>
                       {item.icon}
                     </Box>
                     <Box>
@@ -1482,7 +1491,14 @@ export default function Home() {
             <Grid item xs={12} md={5}>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f8fbff 0%, #f1f5ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                  <Box sx={{ 
+                    p: 3.5, 
+                    background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', 
+                    borderRadius: 3, 
+                    textAlign: 'center', 
+                    border: '1px solid #e6eefc',
+                    boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
+                  }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
                       <People sx={{ color: '#2563eb' }} />
                     </Box>
@@ -1491,7 +1507,14 @@ export default function Home() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f8fbff 0%, #f1f5ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                  <Box sx={{ 
+                    p: 3.5, 
+                    background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', 
+                    borderRadius: 3, 
+                    textAlign: 'center', 
+                    border: '1px solid #e6eefc',
+                    boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
+                  }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
                       <Language sx={{ color: '#2563eb' }} />
                     </Box>
@@ -1500,7 +1523,14 @@ export default function Home() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f8fbff 0%, #f1f5ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                  <Box sx={{ 
+                    p: 3.5, 
+                    background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', 
+                    borderRadius: 3, 
+                    textAlign: 'center', 
+                    border: '1px solid #e6eefc',
+                    boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
+                  }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
                       <AccessTime sx={{ color: '#2563eb' }} />
                     </Box>
@@ -1509,7 +1539,14 @@ export default function Home() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f8fbff 0%, #f1f5ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e5e7eb' }}>
+                  <Box sx={{ 
+                    p: 3.5, 
+                    background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', 
+                    borderRadius: 3, 
+                    textAlign: 'center', 
+                    border: '1px solid #e6eefc',
+                    boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
+                  }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
                       <WorkspacePremium sx={{ color: '#2563eb' }} />
                     </Box>
@@ -1519,7 +1556,14 @@ export default function Home() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <Box sx={{ p: { xs: 3, md: 4 }, borderRadius: 4, background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', boxShadow: '0 20px 45px rgba(59,130,246,.25)' }}>
+                  <Box sx={{ 
+                    p: { xs: 3, md: 4 }, 
+                    borderRadius: 4, 
+                    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)', 
+                    color: 'white',
+                    border: '1px solid rgba(255,255,255,0.15)',
+                    boxShadow: '0 20px 45px rgba(59,130,246,.25)'
+                  }}>
                     <Typography variant="h5" sx={{ fontWeight: 800, mb: { xs: 2, md: 3 } }}>Our Journey</Typography>
                     <Box sx={{ display: 'grid', gap: { xs: 1.5, md: 2 } }}>
                       {[

@@ -29,7 +29,9 @@ import {
   Public,
   TrendingUp,
   CheckCircle,
-  AccessTime
+  AccessTime,
+  HeadsetMic,
+  Send
 } from '@mui/icons-material';
 import { 
   AppBar, 
@@ -46,7 +48,13 @@ import {
   List,
   ListItem,
   ListItemText,
-  TextField
+  TextField,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Checkbox,
+  FormControlLabel
 } from '@mui/material';
 
 export default function Home() {
@@ -1613,93 +1621,97 @@ export default function Home() {
       </Box>
 
       {/* Contact Section */}
-      <Box id="contact" sx={{ py: 20, backgroundColor: '#f8fafc' }}>
+      <Box id="contact" sx={{ py: 14, backgroundColor: '#f8fafc' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 10 }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 4 }}>
-              Get in Touch
+          <Box sx={{ textAlign: 'center', mb: 8 }}>
+            <Typography variant="h3" component="h2" sx={{ fontWeight: 800, mb: 1, color: '#0f172a' }}>
+              Let's Build Your Success Together
             </Typography>
-            <Typography variant="h6" sx={{ color: '#4b5563', maxWidth: '600px', mx: 'auto' }}>
-              Ready to discuss how RECUD can help your business? 
-              Contact us for a consultation or demo.
+            <Typography variant="h6" sx={{ color: '#475569', maxWidth: '780px', mx: 'auto' }}>
+              Ready to transform your business processes? Get in touch with our experts for a
+              personalized consultation and discover how FlowCore can accelerate your growth.
             </Typography>
           </Box>
-          
-          <Grid container spacing={6}>
-            <Grid item xs={12} lg={6}>
-              <Typography variant="h4" sx={{ fontWeight: 'semibold', mb: 6 }}>
-                Contact Information
-              </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Mail sx={{ color: 'primary.main', mr: 1.5 }} />
-                  <Typography color="text.secondary">hello@recud.com</Typography>
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Phone sx={{ color: 'primary.main', mr: 1.5 }} />
-                  <Typography color="text.secondary">+1 (555) 123-4567</Typography>
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <LocationOn sx={{ color: 'primary.main', mr: 1.5 }} />
-                  <Typography color="text.secondary">San Francisco, CA</Typography>
+
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={5}>
+              <Box sx={{ display: 'grid', gap: 2.5 }}>
+                {[
+                  { icon: <Mail sx={{ color: '#2563eb' }} />, title: 'Email Us', desc: 'hello@flowcore.com', sub: 'We respond within 24 hours' },
+                  { icon: <Phone sx={{ color: '#2563eb' }} />, title: 'Call Us', desc: '+1 (555) 123-4567', sub: 'Mon-Fri 9AM-6PM EST' },
+                  { icon: <LocationOn sx={{ color: '#2563eb' }} />, title: 'Visit Us', desc: 'San Francisco, CA', sub: 'Schedule a consultation' },
+                  { icon: <HeadsetMic sx={{ color: '#2563eb' }} />, title: 'Support', desc: '24/7 Technical Support', sub: 'For all our clients' }
+                ].map((item, i) => (
+                  <Box key={i} sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 2, alignItems: 'start', p: 2.25, borderRadius: 2, backgroundColor: 'white', border: '1px solid #e5e7eb' }}>
+                    <Box sx={{ width: 40, height: 40, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 1px #dbeafe' }}>
+                      {item.icon}
+                    </Box>
+                    <Box>
+                      <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#0f172a' }}>{item.title}</Typography>
+                      <Typography variant="body2" sx={{ color: '#1f2c3b', fontWeight: 600 }}>{item.desc}</Typography>
+                      <Typography variant="body2" sx={{ color: '#6b7280' }}>{item.sub}</Typography>
+                    </Box>
+                  </Box>
+                ))}
+
+                <Box sx={{ mt: 1, p: 3, borderRadius: 2.5, backgroundColor: 'white', border: '1px solid #e5e7eb' }}>
+                  <Typography variant="subtitle1" sx={{ fontWeight: 800, color: '#0f172a', mb: 1.5 }}>
+                    Global Offices
+                  </Typography>
+                  <Box sx={{ display: 'grid', gap: 1.25 }}>
+                    {['San Francisco, CA (HQ)', 'New York, NY', 'London, UK', 'Singapore'].map((city, i) => (
+                      <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.25, color: '#334155' }}>
+                        <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
+                        <Typography variant="body2">{city}</Typography>
+                      </Box>
+                    ))}
+                  </Box>
                 </Box>
               </Box>
             </Grid>
-            
-            <Grid item xs={12} lg={6}>
-              <Typography variant="h4" sx={{ fontWeight: 'semibold', mb: 6 }}>
-                Send us a Message
-              </Typography>
-              <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+
+            <Grid item xs={12} md={7}>
+              <Card sx={{ p: { xs: 3, md: 4 }, borderRadius: 3, border: '1px solid #e5e7eb', boxShadow: '0 8px 20px rgba(0,0,0,0.06)' }}>
+                <Typography variant="h6" sx={{ fontWeight: 800, mb: 2, color: '#0f172a' }}>
+                  Request a Consultation
+                </Typography>
                 <Grid container spacing={2}>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      fullWidth
-                      placeholder="First Name"
-                      variant="outlined"
-                      size="medium"
-                    />
+                  <Grid item xs={12} md={6}>
+                    <TextField fullWidth label="Full Name" placeholder="John Doe" />
                   </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      fullWidth
-                      placeholder="Last Name"
-                      variant="outlined"
-                      size="medium"
-                    />
+                  <Grid item xs={12} md={6}>
+                    <TextField fullWidth type="email" label="Email Address" placeholder="john@company.com" />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField fullWidth label="Company Name" placeholder="Your Company" />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <FormControl fullWidth>
+                      <InputLabel id="industry-label">Industry</InputLabel>
+                      <Select labelId="industry-label" label="Industry" defaultValue="">
+                        {['Select Industry','Financial Services','Healthcare','Manufacturing','Retail','Government','Education'].map((opt) => (
+                          <MenuItem key={opt} value={opt === 'Select Industry' ? '' : opt}>{opt}</MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField fullWidth label="Message" multiline rows={5} placeholder="Tell us about your business process challenges and goals..." />
                   </Grid>
                 </Grid>
-                <TextField
-                  fullWidth
-                  type="email"
-                  placeholder="Email"
-                  variant="outlined"
-                  size="medium"
-                />
-                <TextField
-                  fullWidth
-                  placeholder="Message"
-                  variant="outlined"
-                  multiline
-                  rows={4}
-                  size="medium"
-                />
-                <Button
-                  type="submit"
-                  variant="contained"
-                  color="primary"
-                  fullWidth
-                  sx={{ py: 1.5, borderRadius: 2 }}
-                >
-                  Send Message
+                <FormControlLabel sx={{ mt: 1 }} control={<Checkbox />} label={"I agree to receive updates and newsletters from FlowCore. I can unsubscribe at any time."} />
+
+                <Button variant="contained" fullWidth sx={{ mt: 2, py: 1.5, backgroundColor: '#2563eb', borderRadius: 2, textTransform: 'none', fontWeight: 700 }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1 }}>
+                    <Send sx={{ fontSize: 18 }} />
+                    Send Message
+                  </Box>
                 </Button>
-              </Box>
+              </Card>
             </Grid>
           </Grid>
         </Container>
-      </Box>
-
-      {/* Footer */}
+      </Box>{/* Footer */}
       <Box sx={{ backgroundColor: '#111827', color: 'white', py: 12 }}>
         <Container maxWidth="lg">
           <Grid container spacing={4}>

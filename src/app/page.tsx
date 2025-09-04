@@ -16,7 +16,11 @@ import {
   Menu,
   Close,
   AutoAwesome,
-  AccountTree
+  AccountTree,
+  AccountBalance,
+  ShoppingCart,
+  PrecisionManufacturing,
+  HealthAndSafety
 } from '@mui/icons-material';
 import { 
   AppBar, 
@@ -33,8 +37,7 @@ import {
   List,
   ListItem,
   ListItemText,
-  TextField,
-  Paper
+  TextField
 } from '@mui/material';
 
 export default function Home() {
@@ -109,10 +112,6 @@ export default function Home() {
     }
   ];
 
-  const industries = [
-    "Healthcare", "Manufacturing", "Finance", "Retail", "Education", 
-    "Government", "Technology", "Transportation", "Energy", "Real Estate"
-  ];
 
   const team = [
     {
@@ -957,31 +956,198 @@ export default function Home() {
       {/* Industries Section */}
       <Box id="industries" sx={{ py: 20, backgroundColor: '#f8fafc' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 16 }}>
-            <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', mb: 4 }}>
-              Serving All Industries
+          <Box sx={{ textAlign: 'center', mb: 8 }}>
+            <Typography variant="h1" component="h2" sx={{ 
+              fontWeight: 800, 
+              mb: 2,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '2.3rem' },
+              lineHeight: 1.1,
+              color: '#1e293b',
+              letterSpacing: '-0.02em'
+            }}>
+              Industry-Specific Solutions
             </Typography>
-            <Typography variant="h6" sx={{ color: '#4b5563', maxWidth: '600px', mx: 'auto' }}>
-              Our solutions are designed to adapt to the unique challenges and requirements 
-              of any industry, ensuring maximum value and impact.
+            <Typography variant="h6" sx={{ 
+              color: '#64748b', 
+              mb: 4, 
+              lineHeight: 1.6,
+              fontSize: { xs: '1rem', md: '1.125rem' },
+              maxWidth: '800px',
+              mx: 'auto',
+              fontWeight: 400
+            }}>
+              Tailored BPM solutions designed for the unique challenges and requirements of your industry.
             </Typography>
           </Box>
-          
-          <Grid container spacing={3}>
-            {industries.map((industry, index) => (
-              <Grid item xs={6} md={2.4} key={index}>
-                <Paper sx={{ 
-                  p: 3, 
-                  textAlign: 'center',
-                  backgroundColor: 'white',
-                  '&:hover': { boxShadow: 3 }
-                }}>
-                  <Typography variant="h6" sx={{ fontWeight: 'semibold' }}>
-                    {industry}
+
+          <Grid container spacing={4}>
+            {/* Financial Services */}
+            <Grid item xs={12} md={6}>
+              <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
+                <CardContent sx={{ p: 0 }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1.5 }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <AccountBalance sx={{ color: '#3b82f6' }} />
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827' }}>Financial Services</Typography>
+                  </Box>
+                  <Typography variant="body1" sx={{ color: '#6b7280', mb: 3 }}>
+                    Transform banking operations, loan processing, and compliance management with intelligent BPM solutions.
                   </Typography>
-                </Paper>
-              </Grid>
-            ))}
+
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>KEY SOLUTIONS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['Digital onboarding','Risk assessment','Regulatory compliance','Fraud detection'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>RESULTS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['85% faster processing','40% cost reduction','99.9% accuracy'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#10b981' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            {/* E-commerce & Retail */}
+            <Grid item xs={12} md={6}>
+              <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
+                <CardContent sx={{ p: 0 }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1.5 }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <ShoppingCart sx={{ color: '#3b82f6' }} />
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827' }}>E-commerce & Retail</Typography>
+                  </Box>
+                  <Typography variant="body1" sx={{ color: '#6b7280', mb: 3 }}>
+                    Streamline order fulfillment, inventory management, and customer service processes for online and offline retail.
+                  </Typography>
+
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>KEY SOLUTIONS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['Order processing','Inventory optimization','Returns management','Customer support'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>RESULTS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['60% faster fulfillment','30% fewer returns','25% cost savings'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#10b981' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            {/* Manufacturing & Logistics */}
+            <Grid item xs={12} md={6}>
+              <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
+                <CardContent sx={{ p: 0 }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1.5 }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <PrecisionManufacturing sx={{ color: '#3b82f6' }} />
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827' }}>Manufacturing & Logistics</Typography>
+                  </Box>
+                  <Typography variant="body1" sx={{ color: '#6b7280', mb: 3 }}>
+                    Optimize supply chain operations, production planning, and quality control processes for manufacturing excellence.
+                  </Typography>
+
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>KEY SOLUTIONS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['Production planning','Quality control','Supply chain visibility','Asset management'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>RESULTS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['50% faster production','35% quality improvement','45% cost reduction'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#10b981' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            {/* Healthcare & Life Sciences */}
+            <Grid item xs={12} md={6}>
+              <Card sx={{ p: 4, borderRadius: 3, boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}>
+                <CardContent sx={{ p: 0 }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1.5 }}>
+                    <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#dbeafe', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <HealthAndSafety sx={{ color: '#3b82f6' }} />
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#111827' }}>Healthcare & Life Sciences</Typography>
+                  </Box>
+                  <Typography variant="body1" sx={{ color: '#6b7280', mb: 3 }}>
+                    Enhance patient care, clinical workflows, and regulatory compliance in healthcare organizations.
+                  </Typography>
+
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>KEY SOLUTIONS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['Patient onboarding','Clinical workflows','HIPAA compliance','Claims processing'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#3b82f6' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Typography variant="subtitle2" sx={{ color: '#6b7280', fontWeight: 700, mb: 1 }}>RESULTS</Typography>
+                      <Box sx={{ display: 'grid', gap: 1 }}>
+                        {['70% faster onboarding','90% compliance rate','50% error reduction'].map((item, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#374151' }}>
+                            <Box sx={{ width: 6, height: 6, borderRadius: '50%', backgroundColor: '#10b981' }} />
+                            <Typography variant="body2">{item}</Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </Grid>
           </Grid>
         </Container>
       </Box>

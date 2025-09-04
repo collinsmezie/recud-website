@@ -1146,7 +1146,7 @@ export default function Home() {
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
                         {['Digital onboarding','Risk assessment','Regulatory compliance','Fraud detection'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1201,7 +1201,7 @@ export default function Home() {
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
                         {['Order processing','Inventory optimization','Returns management','Customer support'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1256,7 +1256,7 @@ export default function Home() {
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
                         {['Fleet Management','Delivery Tracking','Route Optimization','Driver Management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1311,7 +1311,7 @@ export default function Home() {
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
                         {['Patient onboarding','Clinical workflows','HIPAA compliance','Claims processing'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1366,7 +1366,7 @@ export default function Home() {
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
                         {['Student enrollment','Course management','Certification tracking','Alumni management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1421,7 +1421,7 @@ export default function Home() {
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
                         {['Permit Processing','Regulatory Compliance'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1432,7 +1432,7 @@ export default function Home() {
                     </Grid>
                     <Grid item xs={12} sm={6}>
                       <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
                         {['Citizen Services','Public Records'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1489,19 +1489,19 @@ export default function Home() {
               <Typography variant="h1" component="h2" sx={{ 
                 fontWeight: 800, 
                 mb: 2,
-                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '2.4rem' },
+                fontSize: { xs: '1.875rem', sm: '2.125rem', md: '2.5rem', lg: '2.625rem' },
                 lineHeight: 1.1,
                 color: '#1e293b',
                 letterSpacing: '-0.02em'
               }}>
                 Pioneering the Future of Business Process Management
               </Typography>
-              <Typography variant="body1" sx={{ color: '#6b7280', mb: 2, maxWidth: 720 }}>
+              <Typography variant="body1" sx={{ color: '#6b7280', mb: 2, maxWidth: 720, fontSize: { xs: '0.95rem', md: '1rem' } }}>
                 Founded in 2015, FlowCore has emerged as a leading force in business process management. We specialize in designing and 
                 developing sophisticated BPM software solutions that help organizations across various industries streamline their operations, 
                 reduce costs, and achieve sustainable growth.
               </Typography>
-              <Typography variant="body1" sx={{ color: '#6b7280', mb: 4, maxWidth: 720 }}>
+              <Typography variant="body1" sx={{ color: '#6b7280', mb: 4, maxWidth: 720, fontSize: { xs: '0.95rem', md: '1rem' } }}>
                 Our team of experts combines deep industry knowledge with cutting-edge technology to deliver tailored solutions that address the 
                 unique challenges of each client. We believe in building long-term partnerships that drive continuous innovation and operational excellence.
               </Typography>
@@ -1527,8 +1527,8 @@ export default function Home() {
                       {item.icon}
                     </Box>
                     <Box>
-                      <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#111827', mb: 0.25 }}>{item.title}</Typography>
-                      <Typography variant="body2" sx={{ color: '#6b7280' }}>{item.desc}</Typography>
+                      <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#111827', mb: 0.25, fontSize: '1rem' }}>{item.title}</Typography>
+                      <Typography variant="body2" sx={{ color: '#6b7280', fontSize: '0.9375rem' }}>{item.desc}</Typography>
                     </Box>
                   </Box>
                 ))}
@@ -1538,67 +1538,47 @@ export default function Home() {
             <Grid item xs={12} md={5}>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ 
-                    p: 3.5, 
-                    background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', 
-                    borderRadius: 3, 
-                    textAlign: 'center', 
-                    border: '1px solid #e6eefc',
+                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
                     boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
                   }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
                       <People sx={{ color: '#2563eb' }} />
                     </Box>
-                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>500+</Typography>
-                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Enterprise Clients</Typography>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827', fontSize: '1.75rem' }}>500+</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280', fontSize: '0.9rem' }}>Enterprise Clients</Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ 
-                    p: 3.5, 
-                    background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', 
-                    borderRadius: 3, 
-                    textAlign: 'center', 
-                    border: '1px solid #e6eefc',
+                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
                     boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
                   }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
                       <Language sx={{ color: '#2563eb' }} />
                     </Box>
-                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>50+</Typography>
-                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Countries Served</Typography>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827', fontSize: '1.75rem' }}>50+</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280', fontSize: '0.9rem' }}>Countries Served</Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ 
-                    p: 3.5, 
-                    background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', 
-                    borderRadius: 3, 
-                    textAlign: 'center', 
-                    border: '1px solid #e6eefc',
+                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
                     boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
                   }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
                       <AccessTime sx={{ color: '#2563eb' }} />
                     </Box>
-                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>99.9%</Typography>
-                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Uptime SLA</Typography>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827', fontSize: '1.75rem' }}>99.9%</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280', fontSize: '0.9rem' }}>Uptime SLA</Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ 
-                    p: 3.5, 
-                    background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', 
-                    borderRadius: 3, 
-                    textAlign: 'center', 
-                    border: '1px solid #e6eefc',
+                  <Box sx={{ p: 3.5, background: 'linear-gradient(180deg, #f9fbff 0%, #f3f7ff 100%)', borderRadius: 3, textAlign: 'center', border: '1px solid #e6eefc',
                     boxShadow: '0 10px 25px rgba(59,130,246,0.08)'
                   }}>
                     <Box sx={{ width: 44, height: 44, borderRadius: 2, backgroundColor: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 1.5 }}>
                       <WorkspacePremium sx={{ color: '#2563eb' }} />
                     </Box>
-                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827' }}>25+</Typography>
-                    <Typography variant="body2" sx={{ color: '#6b7280' }}>Industry Awards</Typography>
+                    <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827', fontSize: '1.75rem' }}>25+</Typography>
+                    <Typography variant="body2" sx={{ color: '#6b7280', fontSize: '0.9rem' }}>Industry Awards</Typography>
                   </Box>
                 </Grid>
 
@@ -1611,7 +1591,7 @@ export default function Home() {
                     border: '1px solid rgba(255,255,255,0.15)',
                     boxShadow: '0 20px 45px rgba(59,130,246,.25)'
                   }}>
-                    <Typography variant="h5" sx={{ fontWeight: 800, mb: { xs: 2, md: 3 } }}>Our Journey</Typography>
+                    <Typography variant="h5" sx={{ fontWeight: 800, mb: { xs: 2, md: 3 }, fontSize: '1.25rem' }}>Our Journey</Typography>
                     <Box sx={{ display: 'grid', gap: { xs: 1.5, md: 2 } }}>
                       {[
                         { year: '2015 - Foundation', note: 'Started with a vision to revolutionize BPM' },
@@ -1622,8 +1602,8 @@ export default function Home() {
                         <Box key={i} sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 1.5, alignItems: 'start' }}>
                           <Box sx={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: 'white', mt: 0.75 }} />
                           <Box>
-                            <Typography variant="subtitle1" sx={{ fontWeight: 800, lineHeight: 1.25 }}>{m.year}</Typography>
-                            <Typography variant="body2" sx={{ opacity: 0.9 }}>{m.note}</Typography>
+                            <Typography variant="subtitle1" sx={{ fontWeight: 800, lineHeight: 1.25, fontSize: '1rem' }}>{m.year}</Typography>
+                            <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.9375rem' }}>{m.note}</Typography>
                           </Box>
                         </Box>
                       ))}

@@ -1143,10 +1143,10 @@ export default function Home() {
                     </Box>
                   </Box>
 
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
+                      <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
                         {['Digital onboarding','Risk assessment','Regulatory compliance','Fraud detection'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1154,10 +1154,10 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                    </Box>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                         {['85% faster processing','40% cost reduction','99.9% accuracy'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
@@ -1165,8 +1165,8 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                  </Grid>
+                    </Box>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
@@ -1198,10 +1198,10 @@ export default function Home() {
                     </Box>
                   </Box>
 
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
+                      <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
                         {['Order processing','Inventory optimization','Returns management','Customer support'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1209,10 +1209,10 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                    </Box>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                         {['60% faster fulfillment','30% fewer returns','25% cost savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
@@ -1220,8 +1220,8 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                  </Grid>
+                    </Box>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
@@ -1253,10 +1253,10 @@ export default function Home() {
                     </Box>
                   </Box>
 
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
+                      <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
                         {['Fleet Management','Delivery Tracking','Route Optimization','Driver Management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1264,10 +1264,10 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                    </Box>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                         {['40% route efficiency','90% on-time delivery','50% fuel savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
@@ -1275,8 +1275,8 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                  </Grid>
+                    </Box>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
@@ -1308,10 +1308,10 @@ export default function Home() {
                     </Box>
                   </Box>
 
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
+                      <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
                         {['Patient onboarding','Clinical workflows','HIPAA compliance','Claims processing'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1319,10 +1319,10 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                    </Box>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                         {['70% faster onboarding','90% compliance rate','50% error reduction'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
@@ -1330,8 +1330,8 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                  </Grid>
+                    </Box>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
@@ -1363,10 +1363,10 @@ export default function Home() {
                     </Box>
                   </Box>
 
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
+                      <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
                         {['Student enrollment','Course management','Certification tracking','Alumni management'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
@@ -1374,10 +1374,10 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                    </Box>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                         {['80% faster enrollment','60% admin time saved','95% satisfaction rate'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
@@ -1385,8 +1385,8 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                  </Grid>
+                    </Box>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
@@ -1418,32 +1418,21 @@ export default function Home() {
                     </Box>
                   </Box>
 
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
-                        {['Permit Processing','Regulatory Compliance'].map((item, i) => (
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Key Solutions</Typography>
+                      <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1.5 }}>
+                        {['Permit Processing','Regulatory Compliance','Citizen Services','Public Records'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
                             <Typography variant="body2">{item}</Typography>
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Key Solutions</Typography>
-                      <Box sx={{ display: 'grid', gap: 1, gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' } }}>
-                        {['Citizen Services','Public Records'].map((item, i) => (
-                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
-                            <TaskAlt sx={{ fontSize: 18, color: '#10b981' }} />
-                            <Typography variant="body2">{item}</Typography>
-                          </Box>
-                        ))}
-                      </Box>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1 }}>Results Achieved</Typography>
-                      <Box sx={{ display: 'grid', gap: 1 }}>
+                    </Box>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ color: '#0f172a', fontWeight: 800, mb: 1.5 }}>Results Achieved</Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                         {['70% faster processing','99% transparency','60% cost savings'].map((item, i) => (
                           <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#334155' }}>
                             <TrendingUp sx={{ fontSize: 18, color: '#3b82f6' }} />
@@ -1451,8 +1440,8 @@ export default function Home() {
                           </Box>
                         ))}
                       </Box>
-                    </Grid>
-                  </Grid>
+                    </Box>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>

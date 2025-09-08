@@ -921,7 +921,7 @@ export default function Home() {
           {/* Services Grid */}
           <Grid container spacing={4}>
             {services.map((service, index) => (
-              <Grid item xs={12} md={6} lg={4} key={index}>
+              <Grid item xs={12} sm={6} lg={4} key={index}>
                 <Card sx={{
                   p: 4,
                   height: '100%',
@@ -1447,7 +1447,7 @@ export default function Home() {
           </Grid>
 
           {/* Industries CTA (inside section) */}
-          <Box sx={{ mt: 6, p: { xs: 3, md: 5 }, borderRadius: 3, background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', textAlign: 'center', maxWidth: '100%', mx: 'auto', width: '100%', border: '2px solid #ef4444' }}>
+          <Box sx={{ mt: 6, p: { xs: 3, md: 5 }, borderRadius: 3, background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', textAlign: 'center', maxWidth: '100%', mx: 'auto', width: '100%'}}>
             <Typography variant="h4" sx={{ fontWeight: 800, mb: 1, fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem', lg: '2.25rem' } }}>
               Expertise Across All Major Industries
             </Typography>

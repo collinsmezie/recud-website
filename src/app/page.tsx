@@ -956,11 +956,15 @@ export default function Home() {
                   <Typography variant="h5" sx={{
                     fontWeight: 800,
                     color: '#0f172a',
-                    mb: 1
+                    mb: 1,
+                    fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.375rem' },
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
                   }}>
                     {service.title}
                   </Typography>
-
+                  
                   <Typography sx={{
                     color: '#475569',
                     mb: 2,

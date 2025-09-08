@@ -1613,7 +1613,7 @@ export default function Home() {
       </Box>
 
       {/* Contact Section */}
-      <Box id="contact" sx={{ py: 14, backgroundColor: '#f8fafc' }}>
+      <Box id="contact" sx={{ py: 14, backgroundColor: '#f8fafc'}}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center', mb: 8 }}>
             <Typography variant="h3" component="h2" sx={{
@@ -1765,68 +1765,7 @@ export default function Home() {
           </Grid>
         </Container>
 
-        {/* Contact Us CTA */}
-        <Box sx={{
-          mt: 6,
-          p: { xs: 3, md: 5 },
-          borderRadius: 3,
-          background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)',
-          color: 'white',
-          textAlign: 'center',
-          maxWidth: '100%',
-          mx: 'auto',
-          width: '100%'
-        }}>
-          <Typography variant="h4" sx={{
-            fontWeight: 800,
-            mb: 1,
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem', lg: '2.25rem' }
-          }}>
-            Start Your Digital Transformation Journey
-          </Typography>
-          <Typography sx={{
-            opacity: 0.95,
-            mb: 3,
-            maxWidth: { xs: '100%', sm: '90%', md: '80%', lg: '70%' },
-            mx: 'auto',
-            fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem' }
-          }}>
-            Join 500+ organizations that have transformed their business processes with RECUD. Let's discuss how we can help you achieve your goals.
-          </Typography>
-          <Box sx={{
-            display: 'flex',
-            gap: { xs: 2, sm: 3, md: 4 },
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            opacity: 0.95,
-            flexDirection: { xs: 'column', sm: 'row' },
-            alignItems: 'center'
-          }}>
-            {['Free Consultation', 'No Obligation Quote', 'Custom Solution Design'].map((text, i) => (
-              <Box key={i} sx={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 1.25,
-                minWidth: { xs: 'auto', sm: '200px' },
-                justifyContent: { xs: 'center', sm: 'flex-start' }
-              }}>
-                <Box sx={{
-                  width: 6,
-                  height: 6,
-                  borderRadius: '50%',
-                  backgroundColor: 'rgba(255,255,255,0.9)',
-                  flexShrink: 0
-                }} />
-                <Typography sx={{
-                  fontWeight: 600,
-                  fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem' }
-                }}>
-                  {text}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
-        </Box>
+        
       </Box>
 
       {/* Footer */}
